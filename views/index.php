@@ -89,57 +89,38 @@
     
     <!-- upload files here -->
     <h1 class="title">Upload your images</h1>
-    <form action="../controller/add.php" method="post" class="form-group form">
+    <form action="../backend/addImage.php" method="post" class="form-group form" enctype="multipart/form-data">
       <div class="input-group mb-3">
         <input
           type="file"
           class="form-control"
           id="inputGroupFile02"
-          name="imageUpload"
+          name="imagen"
         />
-        <button class="btn btn-primary">Upload image</button>
+        <input type="text" name="name-image" placeholder="nombre de la imagen">
+        <button type="submit" class="btn btn-primary" name="submit">Upload image</button>
       </div>
     </form>
+
+    <!-- preview image user -->
     <div class="preview-image">
       <img class="imagePreview" src="" alt="">
     </div>
 
-    <!-- images -->
-    <h1 class="text-recent">Mas recientes</h1>
+    <!-- images users-->
+    <?php
+      include("../backend/bd.php");
 
+      $query = "SELECT * FROM files_cloudy";
+      $result = mysqli_query($conex, $query);
+
+      while($fila = mysqli_fetch_array($result)){
+    ?>
+
+  <h1 class="text-recent">Mas recientes</h1>
     <div class="container">
-
       <div class="item red">
-        <img src="https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=600" />
-      </div>
-
-      <div class="item blue">
-        <img
-          src="https://media.istockphoto.com/photos/hi-tec-mosaic-background-picture-id518263535?b=1&k=20&m=518263535&s=612x612&w=0&h=KUXIe8zKatunMDA2AteQXU1rUXjGUvfbtgeSlCzA42Q="
-        />
-      </div>
-
-      <div class="item green">
-        <img src="https://media.istockphoto.com/photos/low-poly-plexus-design-hi-tec-science-background-picture-id1277536100?b=1&k=20&m=1277536100&s=612x612&w=0&h=0bfgTm4JEWrU5MnB5qKY7Fvr5AsDGO_M-rh2c3tiax0=" />
-
-      </div>
-       <div class="item green">
-        <img src="https://images.pexels.com/photos/13741282/pexels-photo-13741282.jpeg?auto=compress&cs=tinysrgb&w=600" />
-      </div> 
-      <div class="item green">
-        <img src="https://images.pexels.com/photos/10306162/pexels-photo-10306162.jpeg?auto=compress&cs=tinysrgb&w=600" />
-      </div> 
-      <div class="item green">
-        <img src="https://images.pexels.com/photos/10182768/pexels-photo-10182768.jpeg?auto=compress&cs=tinysrgb&w=600" />
-      </div> 
-      <div class="item green">
-        <img src="https://www.pexels.com/es-es/@res-138931537/" />
-      </div> 
-      <div class="item green">
-        <img src="https://images.pexels.com/photos/10292806/pexels-photo-10292806.jpeg?auto=compress&cs=tinysrgb&w=600" />
-      </div> 
-      <div class="item green">
-        <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
+        <img src="<?php echo $fila['ruta']; ?>" />
       </div>
     </div>
     </main>
