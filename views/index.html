@@ -83,12 +83,11 @@
 
     <!-- sidebar mobile -->
     <aside class="aside-mobile">
-      <button class="btn btn-primary"><i class="bi bi-list"></i>CLss</button>
+      <button class="btn btn-primary showSidebarmobile"><i class="bi bi-list"></i>CLss</button>
     </aside>
     
     <!-- upload files here -->
     <h1 class="title">Upload your images</h1>
-
     <form action="../controller/add.php" method="post" class="form-group form">
       <div class="input-group mb-3">
         <input
@@ -100,44 +99,46 @@
         <button class="btn btn-primary">Upload image</button>
       </div>
     </form>
+    <div class="preview-image">
+      <img class="imagePreview" src="" alt="">
+    </div>
 
     <!-- images -->
     <h1 class="text-recent">Mas recientes</h1>
 
     <div class="container">
+
       <div class="item red">
-        <img src="https://preview.ibb.co/gQbzQ5/colt_steele_firemarshall.jpg" />
-        <i class="bi bi-triangle-half"></i>
+        <img src="https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=600" />
       </div>
 
       <div class="item blue">
         <img
-          src="https://imgs.search.brave.com/fJrnHMQ1CCM4Yr0_9mrymNsxV0lopcfj4VvOjkDVSu4/rs:fit:841:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5M/a3VLQWJRWkp2T3RG/empBLUVxVURRSGFF/TCZwaWQ9QXBp"
+          src="https://media.istockphoto.com/photos/hi-tec-mosaic-background-picture-id518263535?b=1&k=20&m=518263535&s=612x612&w=0&h=KUXIe8zKatunMDA2AteQXU1rUXjGUvfbtgeSlCzA42Q="
         />
-        <i class="bi bi-triangle-half"></i>
       </div>
 
       <div class="item green">
-        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8311692b-ad9a-433f-9521-74d239c9a589/dffd6td-e8993db1-b12d-4da7-85d4-186b0a395ec6.png/v1/fill/w_700,h_350,q_70,strp/crescent_by_lamona42_dffd6td-350t.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgzMTE2OTJiLWFkOWEtNDMzZi05NTIxLTc0ZDIzOWM5YTU4OVwvZGZmZDZ0ZC1lODk5M2RiMS1iMTJkLTRkYTctODVkNC0xODZiMGEzOTVlYzYucG5nIiwiaGVpZ2h0IjoiPD00MDAiLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ilwvd21cLzgzMTE2OTJiLWFkOWEtNDMzZi05NTIxLTc0ZDIzOWM5YTU4OVwvbGFtb25hNDItNC5wbmciLCJvcGFjaXR5Ijo5NSwicHJvcG9ydGlvbnMiOjAuNDUsImdyYXZpdHkiOiJjZW50ZXIifX0.byqWbAACuxBsKtd6M_a8GNDif1BehqR2kYzm5nGPgUk" />
-        <i class="bi bi-triangle-half"></i>
-      </div> <div class="item green">
+        <img src="https://media.istockphoto.com/photos/low-poly-plexus-design-hi-tec-science-background-picture-id1277536100?b=1&k=20&m=1277536100&s=612x612&w=0&h=0bfgTm4JEWrU5MnB5qKY7Fvr5AsDGO_M-rh2c3tiax0=" />
+
+      </div>
+       <div class="item green">
+        <img src="https://images.pexels.com/photos/13741282/pexels-photo-13741282.jpeg?auto=compress&cs=tinysrgb&w=600" />
+      </div> 
+      <div class="item green">
+        <img src="https://images.pexels.com/photos/10306162/pexels-photo-10306162.jpeg?auto=compress&cs=tinysrgb&w=600" />
+      </div> 
+      <div class="item green">
+        <img src="https://images.pexels.com/photos/10182768/pexels-photo-10182768.jpeg?auto=compress&cs=tinysrgb&w=600" />
+      </div> 
+      <div class="item green">
+        <img src="https://www.pexels.com/es-es/@res-138931537/" />
+      </div> 
+      <div class="item green">
+        <img src="https://images.pexels.com/photos/10292806/pexels-photo-10292806.jpeg?auto=compress&cs=tinysrgb&w=600" />
+      </div> 
+      <div class="item green">
         <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
-        <i class="bi bi-triangle-half"></i>
-      </div> <div class="item green">
-        <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
-        <i class="bi bi-triangle-half"></i>
-      </div> <div class="item green">
-        <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
-        <i class="bi bi-triangle-half"></i>
-      </div> <div class="item green">
-        <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
-        <i class="bi bi-triangle-half"></i>
-      </div> <div class="item green">
-        <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
-        <i class="bi bi-triangle-half"></i>
-      </div> <div class="item green">
-        <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
-        <i class="bi bi-triangle-half"></i>
       </div>
     </div>
 

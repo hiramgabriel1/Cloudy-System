@@ -377,8 +377,6 @@ body {
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
-
-
 .title{
     text-align: center;
     font-weight: bold;
@@ -399,7 +397,7 @@ h1 {
 .text-recent{
 	color: #34495e;
 	position: relative;
-	right: 240px;
+	right: 200px;
 	font-size: 50px;
     font-weight: bold;
 }
@@ -410,8 +408,13 @@ h1 {
   flex-wrap: wrap;
   position: relative;
   left: 95px;
+  overflow: hidden;
 }
 
+.container img{
+	object-fit: cover;
+	width: 100%;
+}
 
 div.item {
   position: relative;
@@ -499,11 +502,35 @@ div.item:hover i {
 
 
 /* mobile section sidebar */
-
 .aside-mobile{
-    display: none;
+	display: none;
 }
 
+.aside-mobile.active{
+    display: block;
+}
+
+ @media screen and (max-width:900px){
+	.text-recent{
+		/* display: none; */
+		position: relative;
+		left: 200px;
+	}
+	.container{
+		position: relative;
+		left: 200px;
+		overflow: hidden;
+		width: 900px;
+	}
+	.form{
+		position: relative;
+		left: 200px;
+    }
+	.title{
+		position: relative;
+		left: 200px
+	 }
+ }
 
 @media screen and (max-width:400px) {
     .card{
@@ -514,10 +541,6 @@ div.item:hover i {
 }  
 
 @media screen and (max-width: 600px){
-	aside{
-		display: none;
-
-	}
 	.text-recent{
 		position: relative;
 		left: 100px
