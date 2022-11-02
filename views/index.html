@@ -12,20 +12,84 @@
       crossorigin="anonymous"
     />
     <!-- materialize.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <!-- bootstrap icon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
     <!-- css -->
     <link rel="stylesheet" href="../public/styles/index.css" />
+    <!-- <link rel="stylesheet" href="../public/styles/sidebar.mobile.css"> -->
     <title>UploadImages</title>
   </head>
   <body>
+    <!-- aside bar -->
+    <aside
+      class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left"
+      id="show-side-navigation1"
+    >
+      <i
+        class="uil-bars close-aside d-md-none d-lg-none"
+        data-close="show-side-navigation1"
+      ></i>
+      <div
+        class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4"
+      >
+        <h1>Cloudy</h1>
+        <div class="ms-2">
+          <h5 class="fs-6 mb-0">
+            <a class="text-decoration-none" href="#"></a>
+          </h5>
+        </div>
+      </div>
+
+      <div class="search position-relative text-center px-4 py-3 mt-2">
+        <input
+          type="text"
+          class="form-control w-100 border-0 bg-transparent"
+          placeholder="Buscar aqui"
+          style="color: #fff"
+        />
+        <i class="fa fa-search position-absolute d-block fs-6"></i>
+      </div>
+
+      <ul class="categories list-unstyled">
+        <li class=""><i class="bi bi-house-door"></i><a href="#">Inicio</a></li>
+        <br />
+        <li class="">
+          <i class="bi bi-mailbox"></i><a href="#">Buzón de sugerencias</a>
+        </li>
+        <br />
+        <li class="">
+          <i class="bi bi-music-note-beamed"></i><a href="#">Música</a>
+        </li>
+        <br />
+        <li class="">
+          <i class="bi bi-camera-video"></i><a href="#">Videos</a>
+        </li>
+        <br />
+        <li class="">
+          <i class="bi bi-chat-square-dots-fill"></i><a href="#">Contacto</a>
+        </li><br>  
+        <li class="">
+          <i class="bi bi-person-x-fill"></i><a href="#">Salir</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- sidebar mobile -->
+    <aside class="aside-mobile">
+      <button class="btn btn-primary"><i class="bi bi-list"></i>CLss</button>
+    </aside>
+    
+    <!-- upload files here -->
     <h1 class="title">Upload your images</h1>
 
-    <!-- form -->
-    <form action="../controller/add.php" method="post" class="form-group">
+    <form action="../controller/add.php" method="post" class="form-group form">
       <div class="input-group mb-3">
         <input
           type="file"
@@ -38,7 +102,7 @@
     </form>
 
     <!-- images -->
-    <h1>An Image Gallery</h1>
+    <h1 class="text-recent">Mas recientes</h1>
 
     <div class="container">
       <div class="item red">
@@ -47,19 +111,43 @@
       </div>
 
       <div class="item blue">
-        <img src="https://imgs.search.brave.com/fJrnHMQ1CCM4Yr0_9mrymNsxV0lopcfj4VvOjkDVSu4/rs:fit:841:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5M/a3VLQWJRWkp2T3RG/empBLUVxVURRSGFF/TCZwaWQ9QXBp"  />
+        <img
+          src="https://imgs.search.brave.com/fJrnHMQ1CCM4Yr0_9mrymNsxV0lopcfj4VvOjkDVSu4/rs:fit:841:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5M/a3VLQWJRWkp2T3RG/empBLUVxVURRSGFF/TCZwaWQ9QXBp"
+        />
         <i class="bi bi-triangle-half"></i>
       </div>
 
       <div class="item green">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8311692b-ad9a-433f-9521-74d239c9a589/dffd6td-e8993db1-b12d-4da7-85d4-186b0a395ec6.png/v1/fill/w_700,h_350,q_70,strp/crescent_by_lamona42_dffd6td-350t.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgzMTE2OTJiLWFkOWEtNDMzZi05NTIxLTc0ZDIzOWM5YTU4OVwvZGZmZDZ0ZC1lODk5M2RiMS1iMTJkLTRkYTctODVkNC0xODZiMGEzOTVlYzYucG5nIiwiaGVpZ2h0IjoiPD00MDAiLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ilwvd21cLzgzMTE2OTJiLWFkOWEtNDMzZi05NTIxLTc0ZDIzOWM5YTU4OVwvbGFtb25hNDItNC5wbmciLCJvcGFjaXR5Ijo5NSwicHJvcG9ydGlvbnMiOjAuNDUsImdyYXZpdHkiOiJjZW50ZXIifX0.byqWbAACuxBsKtd6M_a8GNDif1BehqR2kYzm5nGPgUk" />
+        <i class="bi bi-triangle-half"></i>
+      </div> <div class="item green">
+        <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
+        <i class="bi bi-triangle-half"></i>
+      </div> <div class="item green">
+        <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
+        <i class="bi bi-triangle-half"></i>
+      </div> <div class="item green">
+        <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
+        <i class="bi bi-triangle-half"></i>
+      </div> <div class="item green">
+        <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
+        <i class="bi bi-triangle-half"></i>
+      </div> <div class="item green">
+        <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
+        <i class="bi bi-triangle-half"></i>
+      </div> <div class="item green">
         <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg" />
         <i class="bi bi-triangle-half"></i>
       </div>
     </div>
-    
-    <!-- materialize -->
+
+    <!-- <materialize -- -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
