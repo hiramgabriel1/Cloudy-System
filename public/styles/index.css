@@ -248,115 +248,6 @@ body {
   color: #ffc107;
 }
 
-/** --------------------------------
- -- Please don't do that in real-world projects!
- -- overwrite Bootstrap variables instead.
--------------------------------- */
-
-.navbar {
-  background-color: var(--navbar-bg-color) !important;
-  border: none !important;
-}
-.navbar .dropdown-menu {
-  right: auto !important;
-  left: 0 !important;
-}
-.navbar .navbar-nav > li > a {
-  color: #eee !important;
-  line-height: 55px !important;
-  padding: 0 10px !important;
-}
-.navbar .navbar-brand {
-  color: #fff !important;
-}
-.navbar .navbar-nav > li > a:focus,
-.navbar .navbar-nav > li > a:hover {
-  color: #eee !important;
-}
-
-.navbar .navbar-nav > .open > a,
-.navbar .navbar-nav > .open > a:focus,
-.navbar .navbar-nav > .open > a:hover {
-  background-color: transparent !important;
-  color: #fff !important;
-}
-
-.navbar .navbar-brand {
-  line-height: 55px !important;
-  padding: 0 !important;
-}
-.navbar .navbar-brand:focus,
-.navbar .navbar-brand:hover {
-  color: #fff !important;
-}
-.navbar > .container .navbar-brand,
-.navbar > .container-fluid .navbar-brand {
-  margin: 0 !important;
-}
-@media (max-width: 767px) {
-  .navbar > .container-fluid .navbar-brand {
-    margin-left: 15px !important;
-  }
-  .navbar .navbar-nav > li > a {
-    padding-left: 0 !important;
-  }
-  .navbar-nav {
-    margin: 0 !important;
-  }
-  .navbar .navbar-collapse,
-  .navbar .navbar-form {
-    border: none !important;
-  }
-}
-
-.navbar .navbar-nav > li > a {
-  float: left !important;
-}
-.navbar .navbar-nav > li > a > span:not(.caret) {
-  background-color: #e74c3c !important;
-  border-radius: 50% !important;
-  height: 25px !important;
-  width: 25px !important;
-  padding: 2px !important;
-  font-size: 11px !important;
-  position: relative !important;
-  top: -10px !important;
-  right: 5px !important;
-}
-.dropdown-menu > li > a {
-  padding-top: 5px !important;
-  padding-right: 5px !important;
-}
-.navbar .navbar-nav > li > a > i {
-  font-size: 18px !important;
-}
-
-/* Start media query */
-
-@media (max-width: 767px) {
-  #wrapper {
-    margin: 0 !important;
-  }
-  .statistics .box {
-    margin-bottom: 25px !important;
-  }
-  .navbar .navbar-nav .open .dropdown-menu > li > a {
-    color: #ccc !important;
-  }
-  .navbar .navbar-nav .open .dropdown-menu > li > a:hover {
-    color: #fff !important;
-  }
-  .navbar .navbar-toggle {
-    border: none !important;
-    color: #eee !important;
-    font-size: 18px !important;
-  }
-  .navbar .navbar-toggle:focus,
-  .navbar .navbar-toggle:hover {
-    background-color: transparent !important;
-  }
-}
-
 ::-webkit-scrollbar {
   background: transparent;
   width: 5px;
@@ -396,229 +287,20 @@ h1 {
   font-weight: bold;
 }
 
-
-
-
-/* dont touch */
-/* *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-} */
-body{
-  background: #E1E1E1;
-}
-
-.navigator{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.navigator .list-items button{
-  margin: 4px 10px;
-  outline: none;
-  border: none;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.navigator .list-items .sesion{
-  display: inline-block;
-  text-decoration: none;
-  color: #000;
-  border-radius: 10px;
-  border: 1px solid #fff;
-  background-color: #fff;
-  padding: 6.5px;
-}
-
-button:active, .sesion:active{
-  transform: scale(.9);
-}
-
-
-.content{
-  /* display: flex; */
-  /* justify-content: center; */
-  margin: 40px auto;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.bigtext{
-  font-size: 40px;
-}
-
-.small{
-  font-size: 20px;
-  color: gray;
-}
-
-.category{
-  margin: 70px auto;
-  display: flex;
-  justify-content: center;
-}
-
-.category ul{
-  display: flex;
-}
-
-.category ul li{
-  list-style: none;
-  padding: 0px 40px;
-  cursor: pointer;
-}
-
-.category ul li:hover{
-  color: gray;
-}
-
 .container{
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  /* width: 400px; */
+  position: relative;
+  left: 100px;
   justify-content: center;
-  padding-bottom: 40px;
-}
-
-.tech-box{
-  width: 420px;
-  height: 420px;
-  padding: 4px 10px;
   overflow: hidden;
 }
 
-.tech-box img{
-  border-radius: 20px;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  transition: 1s all;
-}
-
-.tech-box img:hover{
+ .tech-box img:hover{
   background-color: gray;
   opacity: .8;
-}
-
-footer{
-  margin: 0px 10px;
-}
-
-footer .copy{
-  color: lightgray;
-}
-
-
-/* .container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  left: 95px;
-  overflow: hidden;
-}
-
-.container img {
-  object-fit: cover;
-  width: 100%;
-}
-
-div.item {
-  position: relative;
-  float: left;
-  overflow: hidden;
-  margin: 10px 1%;
-  min-width: 220px;
-  max-width: 310px;
-  width: 100%;
-  background: #000000;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-}
-
-div.item * {
-  box-sizing: border-box;
-}
-
-div.item img {
-  max-width: 100%;
-  vertical-align: top;
-  height: 210px;
-}
-
-div.item i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  font-size: 34px;
-  color: #000000;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  background: #ffffff;
-}
-
-div.item a {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-}
-
-div.item.blue {
-  background-color: #34495e;
-}
-div.item.blue i {
-  color: #34495e;
-}
-div.item.red {
-  background-color: #e74c3c;
-}
-div.item.red i {
-  color: #e74c3c;
-}
-
-div.item.green {
-  background-color: #16a085;
-}
-div.item.green i {
-  color: #16a085;
-}
-
-div.item:hover img {
-  opacity: 0.3;
-  filter: grayscale(100%);
-  cursor: pointer;
-}
-
-div.item * {
-  transition: all 0.35s ease-in-out;
-}
-
-div.item i {
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
-}
-
-div.item:hover i {
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.aside-mobile {
-  display: none;
-}
-
-.aside-mobile.active {
-  display: block;
-}
+} 
 
 @media screen and (max-width: 900px) {
   .text-recent {
@@ -663,9 +345,6 @@ div.item:hover i {
   .form {
     overflow: hidden;
   }
-  * {
-    overflow-x: hidden;
-  }
 }
 
 @media screen and(max-width: 600px) {
@@ -676,4 +355,4 @@ div.item:hover i {
     position: relative;
     left: 200px;
   }
-} */
+} 

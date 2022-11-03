@@ -24,7 +24,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../public/styles/index.css" />
     <!-- <link rel="stylesheet" href="../public/styles/sidebar.mobile.css"> -->
-    <title>UploadImages</title>
+    <title>CloudySystem</title>
   </head>
   <body>
     <main>
@@ -97,8 +97,8 @@
           id="inputGroupFile02"
           name="imagen"
         />
-        <input type="text" name="name-image" placeholder="nombre de la imagen" autocomplete="off">
-        <button type="submit" class="btn btn-primary" name="btn-submit">Upload image</button>
+        <input type="text" name="name-image" placeholder="Nombre de la imagen" autocomplete="off">
+        <button type="submit" class="btn btn-primary" name="btn-submit">Subir</button>
       </div>
     </form>
 
@@ -109,7 +109,7 @@
 
     <!-- images users-->
   <h1 class="text-recent">Mas recientes</h1>
-           <div class="container">
+           <div class="container" style="position:relative; left: 100px;">
               <?php   
                   include("../backend/bd.php");    
                   $query = "SELECT * FROM imagenes";
@@ -118,12 +118,25 @@
                   while ($fila = mysqli_fetch_array($result)) {
               ?>
               <div class="tech-box">
-                  <img src="<?php echo $fila['ruta'];?>" alt="">
+                  <img src="<?php echo $fila['ruta'];?>" alt="" style="width: 300px; height:300px;">
               </div>
               <!-- close keys -->
               <?php
                   }
               ?>
+              <style>
+                .tech-box {
+                  overflow: hidden;
+                  margin: 10px 20px;
+                  border-radius: 20px;
+                  cursor: pointer;
+                }
+
+                .tech-box img{
+                  width: 100%;
+                  object-fit: cover;
+                }
+              </style>
           </div>  
     </main>
     <!-- <materialize -- -->
