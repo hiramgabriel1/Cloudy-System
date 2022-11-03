@@ -1,7 +1,7 @@
 <?php
-    $conex = mysqli_connect("localhost", "root", "", "cloudysystem");
+    $conex = mysqli_connect("localhost", "root", "", "mafcy");
     if($conex){
-        echo "done!";
+        // echo "done!";
     }else{
         echo "error";
     }

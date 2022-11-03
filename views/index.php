@@ -97,8 +97,8 @@
           id="inputGroupFile02"
           name="imagen"
         />
-        <input type="text" name="name-image" placeholder="nombre de la imagen">
-        <button type="submit" class="btn btn-primary" name="submit">Upload image</button>
+        <input type="text" name="name-image" placeholder="nombre de la imagen" autocomplete="off">
+        <button type="submit" class="btn btn-primary" name="btn-submit">Upload image</button>
       </div>
     </form>
 
@@ -108,21 +108,23 @@
     </div>
 
     <!-- images users-->
-    <?php
-      include("../backend/bd.php");
-
-      $query = "SELECT * FROM files_cloudy";
-      $result = mysqli_query($conex, $query);
-
-      while($fila = mysqli_fetch_array($result)){
-    ?>
-
   <h1 class="text-recent">Mas recientes</h1>
-    <div class="container">
-      <div class="item red">
-        <img src="<?php echo $fila['ruta']; ?>" />
-      </div>
-    </div>
+           <div class="container">
+              <?php   
+                  include("../backend/bd.php");    
+                  $query = "SELECT * FROM imagenes";
+                  $result = mysqli_query($conex, $query);
+
+                  while ($fila = mysqli_fetch_array($result)) {
+              ?>
+              <div class="tech-box">
+                  <img src="<?php echo $fila['ruta'];?>" alt="">
+              </div>
+              <!-- close keys -->
+              <?php
+                  }
+              ?>
+          </div>  
     </main>
     <!-- <materialize -- -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
