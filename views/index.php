@@ -59,34 +59,29 @@
       </div>
 
       <ul class="categories list-unstyled">
-        <li class=""><i class="bi bi-house-door"></i><a href="#">Inicio</a></li>
+        <li class=""><i class="bi bi-house-door"></i><a href="./index.php">Inicio</a></li>
         <br />
         <li class="">
-          <i class="bi bi-mailbox"></i><a href="#">Buzón de sugerencias</a>
+          <i class="bi bi-mailbox"></i><a href="./buzon.php">Buzón de sugerencias</a>
         </li>
         <br />
         <li class="">
-          <i class="bi bi-music-note-beamed"></i><a href="#">Música</a>
+          <i class="bi bi-music-note-beamed"></i><a href="./music.php">Música</a>
         </li>
         <br />
         <li class="">
-          <i class="bi bi-camera-video"></i><a href="#">Videos</a>
+          <i class="bi bi-camera-video"></i><a href="./video.php">Videos</a>
         </li>
         <br />
         <li class="">
           <i class="bi bi-chat-square-dots-fill"></i><a href="#">Contacto</a>
         </li><br>  
         <li class="">
-          <i class="bi bi-person-x-fill"></i><a href="#">Salir</a>
+          <i class="bi bi-person-x-fill"></i><a href="../backend/logout.php">Salir</a>
         </li>
       </ul>
     </aside>
 
-    <!-- sidebar mobile -->
-    <aside class="aside-mobile">
-      <button class="btn btn-primary showSidebarmobile"><i class="bi bi-list"></i>CLss</button>
-    </aside>
-    
     <!-- upload files here -->
     <h1 class="title">Upload your images</h1>
     <form action="../backend/addImage.php" method="post" class="form-group form" enctype="multipart/form-data">
@@ -118,15 +113,11 @@
                   while ($fila = mysqli_fetch_array($result)) {
               ?>
               <div class="tech-box">
-                <img src="https://images.pexels.com/photos/6153741/pexels-photo-6153741.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" width="300px; height: 300px;">
-                
-                <img src="https://images.pexels.com/photos/6153741/pexels-photo-6153741.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" width="300px; height: 300px;">
-
-
                 <!-- dont touch please -->
                   <img src="<?php echo $fila['ruta'];?>" alt="" style="width: 300px; height:300px;">
-                  <!-- dont touch please -->
+            
                 </div>
+              <!-- close keys -->
               <?php
                   }
               ?>
