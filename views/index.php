@@ -28,7 +28,7 @@
   </head>
   <body>
     <main>
-    <!-- aside bar -->
+    <!-- side bar -->
     <aside
       class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left"
       id="show-side-navigation1"
@@ -82,11 +82,6 @@
       </ul>
     </aside>
 
-    <!-- sidebar mobile -->
-    <aside class="aside-mobile">
-      <button class="btn btn-primary showSidebarmobile"><i class="bi bi-list"></i>CLss</button>
-    </aside>
-    
     <!-- upload files here -->
     <h1 class="title">Upload your images</h1>
     <form action="../backend/addImage.php" method="post" class="form-group form" enctype="multipart/form-data">
