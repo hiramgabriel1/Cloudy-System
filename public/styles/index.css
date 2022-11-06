@@ -302,6 +302,19 @@ h1 {
   opacity: .8;
 } 
 
+/* theme config user */
+.theme-sun{
+  display: none;
+}
+
+.theme-sun.active{
+  display: inline-block;
+}
+
+.dark-theme.active{
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
   .text-recent {
     position: relative;

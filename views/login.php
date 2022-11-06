@@ -17,14 +17,15 @@
             <h4 class="title text-center mt-4 pb-3">Iniciar sesión en Cloudy</h4>
             
             <!-- form -->
-        <form class='col-sm-10 col-12 mx-auto' action="../backend/login.php">
+        <form class='col-sm-10 col-12 mx-auto' action="../backend/validate.sesion.php" method="post">
               <div class='form-group '>
-                <input type="email" class="form-control " placeholder='example@gmail.com'>
+              <input type="text" class="form-control " placeholder='Ingresa tu nombre de usuario' name="name"><br>
+              <input type="email" class="form-control " placeholder='example@gmail.com' name="email">
               </div>
                <div class='form-group py-3 ' >
-                <input type="password" class="form-control" placeholder='********'>
+                <input type="password" class="form-control" placeholder='********' name="password">
               </div>               <div class=''>
-                <input type="submit" class="btn  btn-primary d-block w-100 " value='Iniciar sesión'><br>
+                <input type="submit" class="btn  btn-primary d-block w-100 " value='Iniciar sesión' name="submit"><br>
                 <input type="button" class="btn  btn-success d-block w-100 registerOpenBtn" value='Registrarse'>
               </div>
        </form>

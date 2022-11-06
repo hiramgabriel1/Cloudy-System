@@ -1,3 +1,21 @@
+<!-- validar sesión -->
+<?php
+    session_start();
+    error_reporting(0);
+
+    $varsession = $_SESSION['user'];
+    if($varsession  == null || $varsession= ''){
+        // error message
+        echo "No tienes permisos para acceder. Inicia sesión o registrate";
+        // redireccionar
+        echo "<br><br> <a href='./login.php'>Iniciar sesión</a>";
+        echo "<br><br> <a href='./register.php'>Registrarse</a>";
+
+        // close sesion
+        die();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -60,27 +78,25 @@
 
       <ul class="categories list-unstyled">
         <li class=""><i class="bi bi-house-door"></i><a href="./index.php">Inicio</a></li>
-        <br />
-        <li class="">
-          <i class="bi bi-mailbox"></i><a href="./buzon.php">Buzón de sugerencias</a>
-        </li>
-        <br />
-        <li class="">
-          <i class="bi bi-music-note-beamed"></i><a href="./music.php">Música</a>
-        </li>
-        <br />
-        <li class="">
+        <!-- <li class="">
           <i class="bi bi-camera-video"></i><a href="./video.php">Videos</a>
-        </li>
+        </li> -->
         <br />
         <li class="">
           <i class="bi bi-chat-square-dots-fill"></i><a href="#">Contacto</a>
         </li><br>  
         <li class="">
-          <i class="bi bi-person-x-fill"></i><a href="../backend/logout.php">Salir</a>
+          <i title="theme dark" class="bi bi-person-x-fill close-sesion"></i><a href="../backend/closeSesion.php">Salir</a>
+      </li><br>
+        
+        <!-- theme config -->
+        <li class="">
+          <i title="theme dark" class="theme-dark bi bi-moon-fill"></i>
+          <i title="theme white" class="theme-sun bi bi-sun"></i>
         </li>
       </ul>
     </aside>
+
 
     <!-- upload files here -->
     <h1 class="title">Upload your images</h1>
@@ -114,7 +130,7 @@
               ?>
               <div class="tech-box">
                 <!-- dont touch please -->
-                  <img src="<?php echo $fila['ruta'];?>" alt="" style="width: 300px; height:300px;">
+                <img src="<?php echo $fila['ruta'];?>" alt="" style="width: 300px; height:300px;">
             
                 </div>
               <!-- close keys -->
@@ -145,5 +161,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <!-- <script src="../model/scripts/app.js"></script> -->
   </body>
 </html>

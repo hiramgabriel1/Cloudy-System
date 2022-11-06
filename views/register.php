@@ -19,7 +19,7 @@
             <!-- form -->
         <form class='col-sm-10 col-12 mx-auto' action="../backend/add.user.php" method="post">
               <div class='form-group '>
-                <input type="text" class="form-control " placeholder='Nombre' name="name">
+                <input type="text" class="form-control " placeholder='Nombre' name="name"><br>
                 <input type="email" class="form-control " placeholder='example@gmail.com' name="email">
               </div>
                <div class='form-group py-3 ' >

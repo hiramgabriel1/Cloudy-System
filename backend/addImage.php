@@ -2,6 +2,20 @@
     include("./bd.php");
 
     if(isset($_POST['btn-submit'])){
+        // function validar(archivo){
+        //      var aux = archivo.split(‘.’);  
+            
+        //      if(aux[aux .length-1] == ‘mp4’)       
+        //         echo "video";
+        //         header("Location: ../views/login.php");
+            
+        //         else{       
+        //         alert(‘El archivo debe ser .txt’);       
+        //         // return false;    
+        //     } 
+        // }
+
+        // validar($tmp);
         $nameImage = $_FILES['imagen']['name'];
         $tmp = $_FILES['imagen']['tmp_name'];
 
@@ -21,5 +35,4 @@
             echo "error"; 
         }
     }
-
 ?>
