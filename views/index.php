@@ -78,9 +78,9 @@
 
       <ul class="categories list-unstyled">
         <li class=""><i class="bi bi-house-door"></i><a href="./index.php">Inicio</a></li>
-        <!-- <li class="">
-          <i class="bi bi-camera-video"></i><a href="./video.php">Videos</a>
-        </li> -->
+        <li class="">
+          <i class="bi bi-camera-video"></i><a href="./posts.php">Publicaciones</a>
+        </li>
         <br />
         <li class="">
           <i class="bi bi-chat-square-dots-fill"></i><a href="#">Contacto</a>
@@ -97,7 +97,6 @@
       </ul>
     </aside>
 
-
     <!-- upload files here -->
     <h1 class="title">Upload your images</h1>
     <form action="../backend/addImage.php" method="post" class="form-group form" enctype="multipart/form-data">
@@ -108,7 +107,7 @@
           id="inputGroupFile02"
           name="imagen"
         />
-        <input type="text" name="name-image" placeholder="Nombre de la imagen" autocomplete="off">
+        <!-- <input type="text" name="name-image" placeholder="Nombre de la imagen" autocomplete="off"> -->
         <button type="submit" class="btn btn-primary" name="btn-submit">Subir</button>
       </div>
     </form>
@@ -119,7 +118,7 @@
     </div>
 
     <!-- images users-->
-  <h1 class="text-recent">Mas recientes</h1>
+  <h1 class="text-recent">Imagenes recientes</h1>
            <div class="container" style="position:relative; left: 100px;">
               <?php   
                   include("../backend/bd.php");    

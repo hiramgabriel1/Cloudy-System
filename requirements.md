@@ -1,7 +1,30 @@
 ## CAMILO
-1.- Realizar un responsive de la sección not_session.html
+1.- Realizar un responsive de la sección not_session.html y crear un diseño de acuerdo a la sección 
+
 2.- Hacer test de funcionamiento en mobile (usando la herramienta de desarrolladores del navegador)
+
 3.- Realizar un responsive de la sección inicial (index.php)
+
+4.- Sección de posts.php, usar la misma plantilla de index.php, solo que crear un modal para poder añadir "publicaciones", con los siguientes requerimientos:
+    4.1 Titulo del post
+    4.2 Descripción del post
+    4.3 imagen
+
+## HIRAM
+1.- Realizar preferencias de usuario:
+ 1.1 Notificaciones web
+ 1.2 Preferencias de tema (dark theme, sun theme) guardar en localstorage
+
+2.- Crear una nueva tabla en la bd para "posts"
+ 2.1 Renderizaer posts
+ 2.2 Opcion eliminar posts
+
+3.- Sección de comentarios en posts
+ 3.1 renderizar comentarios y poder eliminar 
+
+4.- Permitir a los usuarios descargar imagenes
+5.- Rutas protegidas
+ 5.1 crear files con respuesta correspondientes a http (manejo de errores)
 
 
 ## Pendientes 
@@ -15,7 +38,11 @@
 
 
 
-## Updates PROXIMO
+
+
+## !UPDATES PROXIMO! ##
 Cambiar el proyecto a react con php
-crear una api rest con php  y consumirla desde php
+
+crear una api rest con php o nodejs  y consumirla desde php o nodejs
+
 usar un framework como tailwind para estilizar 

@@ -20,9 +20,7 @@
         if($filas){
             header("Location: ../views/index.php");
         }else{
-            echo "Error, no tienes una cuenta:( <br><br>";
-            echo "<a href='../views/register.php'>Registrarse</a> <br><br>";
-            echo "<a href='../views/login.php'>Iniciar sesión</a>";
+            header("Location: ../views/not_session.html");
         }
 
         mysqli_free_result($result);
