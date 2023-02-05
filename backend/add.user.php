@@ -9,9 +9,11 @@
         $sql = "INSERT INTO users (name_user, email_user, password_user) VALUES ('$name', '$email', '$password')";
         $result = mysqli_query($conex, $sql);
         if($result){
-            header("Location: ../views/index.php");
+            header("Location: ../views/login.php");
         }else{
             header("Location: ../views/register.php");
         }
+    }else{
+        echo "no  process";
     }
 ?>

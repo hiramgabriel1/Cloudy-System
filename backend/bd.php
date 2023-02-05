@@ -1,5 +1,5 @@
 <?php
-    $conex = mysqli_connect("localhost", "root", "", "mafcy");
+    $conex = mysqli_connect("localhost", "root", "", "cloudy");
     if($conex){
         // echo "done!";
     }else{

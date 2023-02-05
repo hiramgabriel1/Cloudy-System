@@ -1,4 +1,3 @@
-<!-- validar sesión -->
 <?php
     session_start();
     error_reporting(0);
@@ -7,6 +6,7 @@
     if($varsession  == null || $varsession= ''){
         // error message
         echo "No tienes permisos para acceder. Inicia sesión o registrate";
+        header("Location: ./not_session.html");
         // redireccionar
         echo "<br><br> <a href='./login.php'>Iniciar sesión</a>";
         echo "<br><br> <a href='./register.php'>Registrarse</a>";
@@ -15,7 +15,6 @@
         die();
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,6 +44,7 @@
     <title>CloudySystem</title>
   </head>
   <body>
+
     <main>
     <!-- aside bar -->
     <aside
@@ -123,15 +123,14 @@
            <div class="container" style="position:relative; left: 100px;">
               <?php   
                   include("../backend/bd.php");    
-                  $query = "SELECT * FROM imagenes";
+                  $query = "SELECT * FROM assets";
                   $result = mysqli_query($conex, $query);
 
                   while ($fila = mysqli_fetch_array($result)) {
               ?>
               <div class="tech-box">
                 <!-- dont touch please -->
-                <img src="<?php echo $fila['ruta'];?>" alt="" style="width: 300px; height:300px;">
-            
+                    <img src="<?php echo $fila['ruta'];?>" alt="" style="width: 300px; height:300px;">
                 </div>
               <!-- close keys -->
               <?php
@@ -143,6 +142,8 @@
                   margin: 10px 20px;
                   border-radius: 20px;
                   cursor: pointer;
+                  display: flex;
+                  /* justify-content: center; */
                 }
 
                 .tech-box img{

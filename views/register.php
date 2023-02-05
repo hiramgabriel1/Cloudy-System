@@ -24,7 +24,8 @@
               </div>
                <div class='form-group py-3 ' >
                 <input type="password" class="form-control" placeholder='********' name="password">
-              </div>               <div class=''>
+              </div>               
+              <div class=''>
                 <input type="submit" class="btn  btn-success d-block w-100 registerOpenBtn" value='Registrarse' name="submit"><br>
                 <input type="button" class="btn  btn-primary d-block w-100 loginOpenBtn " value='Iniciar sesión'>
             </div>
