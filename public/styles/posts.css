@@ -316,6 +316,9 @@ h1 {
   display: none;
 }
 
+
+
+/* responsive */
 @media screen and (max-width: 900px) {
   .text-recent {
     position: relative;
