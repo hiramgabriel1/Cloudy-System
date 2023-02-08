@@ -1,0 +1,135 @@
+body {
+    background-image: url('../images/stacked-steps-haikei.svg');
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  
+}
+
+.Img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto>p {
+    font-size: 21px;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.o {
+    display: inline;
+    color: #fff;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iniciar {
+    margin: 20px;
+    height: 50px;
+    width: 150px;
+    margin: 20px;
+    background: transparent;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    transition: all 0.5s ease;
+}
+
+.Registrate {
+    height: 50px;
+    width: 150px;
+    margin: 20px;
+    background: transparent;
+    border-radius: 50px;
+    border: 2px solid #fff;
+}
+
+.Registrate>a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.iniciar>a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.iniciar:hover {
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+}
+
+
+
+.Registrate:hover {
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+
+}
+
+/*El ancho maximo no supera los 600px*/
+@media (max-width:600px) {
+    .Img {
+        width: 75vw;  /*Le estoy diciendo que tome el 75% de la pantalla*/
+        max-width: 1000px; 
+        min-width: 320px;  /*estandar movil*/
+        margin: auto;
+    }
+    img{
+      width: 100%;
+    }
+
+    .texto {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .o {
+        position: absolute;
+    }
+
+    .botones {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width:300px) {
+
+    .Img {
+        width: 75vw;  /*Le estoy diciendo que tome el 75% de la pantalla*/
+        max-width: 1000px; 
+        min-width: 320px;  /*estandar movil*/
+        margin: auto;
+    }
+    img{
+      width: 100%;
+    }
+    .o {
+        position: absolute;
+    }
+
+    
+}
