@@ -99,6 +99,14 @@
 
     <!-- upload files here -->
     <h1 class="title">Publica algo</h1>
+
+    <!-- basic posts -->
+    <form action="../backend/addComment.php" method="post" class="form-upload-post-basic">
+     
+    <!-- hacer aqui los posts -->
+    </form>
+
+    <!-- posts with files -->
     <form action="../backend/addImage.php" method="post" class="form-group form" enctype="multipart/form-data">
       <div class="input-group mb-3">
         <input
@@ -158,6 +166,7 @@
                 }
               </style>
           </div>  
+          
     </main>
 
     <!-- <materialize -- -->

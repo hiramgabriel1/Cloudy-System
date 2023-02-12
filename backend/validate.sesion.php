@@ -20,7 +20,7 @@
         if($filas){
             header("Location: ../views/index.php");
         }else{
-            header("Location: ../views/not_session.html");
+            header("Location: ../error/not_session.html");
         }
 
         mysqli_free_result($result);
