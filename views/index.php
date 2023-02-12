@@ -1,3 +1,4 @@
+
 <?php
     session_start();
     error_reporting(0);
@@ -18,6 +19,7 @@
 ?>
 
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -262,6 +264,7 @@
             </span>
           </a>
         </div>
+<<<<<<< HEAD
         <div class="main">
           <div class="search-bar">
             <input type="text" placeholder="Search" />
@@ -310,6 +313,75 @@
                       Player name <a href="#">Quan Ha</a>
                     </div>
                   </div>
+=======
+      </div>
+
+      <div class="search position-relative text-center px-4 py-3 mt-2">
+        <input
+          type="text"
+          class="form-control w-100 border-0 bg-transparent"
+          placeholder="Buscar aqui"
+          style="color: #fff"
+        />
+        <i class="fa fa-search position-absolute d-block fs-6"></i>
+      </div>
+
+      <ul class="categories list-unstyled">
+        <li class=""><i class="bi bi-house-door"></i><a href="./index.php">Inicio</a></li>
+       <br/>
+        <li class="">
+          <i class="bi bi-camera-video"></i><a href="./posts.php">Publicaciones</a>
+        </li>
+        <br />
+        <li class="">
+          <i class="bi bi-chat-square-dots-fill"></i><a href="#">Contacto</a>
+        </li><br>  
+        <li class="">
+          <i title="theme dark" class="bi bi-person-x-fill close-sesion"></i><a href="../backend/closeSesion.php">Salir</a>
+      </li><br>
+        
+        <!-- theme config -->
+        <li class="">
+          <i title="theme dark" class="theme-dark bi bi-moon-fill"></i>
+          <i title="theme white" class="theme-sun bi bi-sun"></i>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- upload files here -->
+    <h1 class="title">Upload your images</h1>
+    <form action="../backend/addImage.php" method="post" class="form-group form" enctype="multipart/form-data">
+      <div class="input-group mb-3">
+        <input
+          type="file"
+          class="form-control"
+          id="inputGroupFile02"
+          name="imagen"
+        />
+        <!-- <input type="text" name="name-image" placeholder="Nombre de la imagen" autocomplete="off"> -->
+        <button type="submit" class="btn btn-primary" name="btn-submit">Subir</button>
+      </div>
+    </form>
+
+    <!-- preview image user -->
+    <div class="preview-image">
+      <img class="imagePreview" src="" alt="">
+    </div>
+
+    <!-- images users-->
+  <h1 class="text-recent">Imagenes recientes</h1>
+           <div class="container" style="position:relative; left: 100px;">
+              <?php   
+                  include("../backend/bd.php");    
+                  $query = "SELECT * FROM assets";
+                  $result = mysqli_query($conex, $query);
+
+                  while ($fila = mysqli_fetch_array($result)) {
+              ?>
+              <div class="tech-box">
+                <!-- dont touch please -->
+                    <img src="<?php echo $fila['ruta'];?>" alt="" style="width: 300px; height:300px;">
+>>>>>>> 111e5c81a185f502ef88ab871555d3b43956d9f6
                 </div>
                 <div class="event box">
                   <div class="event-wrapper">

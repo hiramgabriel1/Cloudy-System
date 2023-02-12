@@ -1,6 +1,4 @@
 ## CAMILO 
-1.- Realizar un responsive de la sección not_session.html y crear un diseño de acuerdo a la sección 
-
 2.- Hacer test de funcionamiento en mobile (usando la herramienta de desarrolladores del navegador)
 
 3.- Realizar un responsive de la sección inicial (index.php)
