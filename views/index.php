@@ -80,6 +80,7 @@
 
       <ul class="categories list-unstyled">
         <li class=""><i class="bi bi-house-door"></i><a href="./index.php">Inicio</a></li>
+       <br/>
         <li class="">
           <i class="bi bi-camera-video"></i><a href="./posts.php">Publicaciones</a>
         </li>
