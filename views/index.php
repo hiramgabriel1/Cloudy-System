@@ -236,7 +236,7 @@
       <div class="profile">
         <div class="profile-avatar">
           <img src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg" alt="" class="profile-img">
-          <div class="profile-name">Quan Ha</div>
+          <div class="profile-name">rustycode</div>
         </div>
         <img src="https://images.unsplash.com/photo-1508247967583-7d982ea01526?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" alt="" class="profile-cover">
         <div class="profile-menu">
@@ -270,7 +270,7 @@
               <div class="info-item">
                 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                   <path d="M437 75C388.7 26.6 324.4 0 256 0S123.3 26.6 75 75C26.6 123.3 0 187.6 0 256s26.6 132.7 75 181c48.3 48.4 112.6 75 181 75s132.7-26.6 181-75c48.4-48.3 75-112.6 75-181s-26.6-132.7-75-181zM252.4 481.9c-52-.9-103.7-19.5-145.2-55.8L256 277.2l21.7 21.8a165.9 165.9 0 00-35.7 87c-3.5 30.5 0 63.3 10.4 95.9zM299 320.3l105.7 105.8a224.8 224.8 0 01-121.3 54.1C262 419.5 268 360.3 299 320.3zm21.2-21.2c40-31 99.2-37 160-15.6A224.8 224.8 0 01426 404.8zM482 252.4a231.7 231.7 0 00-96-10.4 165.9 165.9 0 00-87 35.7L277.3 256l148.9-148.8c36.3 41.5 55 93.2 55.8 145.2zm-290.2-39.5c-40 31-99.2 37-160 15.6A224.8 224.8 0 0186 107.2zm-84.5-127a224.8 224.8 0 01121.3-54.1C250 92.5 244 151.7 213 191.7zM270 126c3.5-30.5 0-63.3-10.4-95.9 52 .9 103.7 19.5 145.2 55.8L256 234.8 234.3 213a165.9 165.9 0 0035.7-87zM30 259.6a242 242 0 0072.7 11.7c7.8 0 15.6-.5 23.2-1.3a165.9 165.9 0 0087-35.7l21.8 21.7L85.9 404.8a225.3 225.3 0 01-55.8-145.2z" /></svg>
-                Player name <a href="#">Quan Ha</a>
+                Player name <a href="#">rustycode</a>
               </div>
             </div>
           </div>
@@ -313,7 +313,7 @@
             </div>
             <div class="status-main">
               <img src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg" class="status-img">
-              <textarea class="status-textarea" placeholder="Write something to Quan Ha.."></textarea>
+              <textarea class="status-textarea" placeholder="Write something to rustycode.."></textarea>
             </div>
             <div class="status-actions">
               <a href="#" class="status-action">
@@ -348,7 +348,7 @@
             <div class="status-main">
               <img src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg" class="status-img" />
               <div class="album-detail">
-                <div class="album-title"><strong>Quan Ha</strong> create new <span>album</span></div>
+                <div class="album-title"><strong>rustycode</strong> create new <span>album</span></div>
                 <div class="album-date">6 hours ago</div>
               </div>
               <button class="intro-menu"></button>
@@ -402,7 +402,7 @@
           <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
         </svg>
       </button>
-      <span class="account-user">Quan Ha
+      <span class="account-user">rustycode
         <img src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg" alt="" class="account-profile" alt="">
         <span>▼</span>
       </span>
