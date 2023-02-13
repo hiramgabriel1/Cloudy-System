@@ -235,14 +235,12 @@
     <div class="main-container">
       <div class="profile">
         <div class="profile-avatar">
-          <img src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg" alt="" class="profile-img">
-          <div class="profile-name">rustycode</div>
+        <!--  <img src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg" alt="" class="profile-img">
+          <div class="profile-name">rustycode</div>--> 
         </div>
         <img src="https://images.unsplash.com/photo-1508247967583-7d982ea01526?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" alt="" class="profile-cover">
         <div class="profile-menu">
           <a class="profile-menu-link active">Timeline</a>
-          <a class="profile-menu-link">About</a>
-          <a class="profile-menu-link">Friends</a>
           <a class="profile-menu-link">Photos</a>
           <a class="profile-menu-link">More</a>
         </div>
@@ -312,8 +310,7 @@
               <a class="status-menu-item" href="#">Videos</a>
             </div>
             <div class="status-main">
-              <img src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg" class="status-img">
-              <textarea class="status-textarea" placeholder="Write something to rustycode.."></textarea>
+              <textarea class="status-textarea" placeholder="Write something to @User.."></textarea>
             </div>
             <div class="status-actions">
               <a href="#" class="status-action">
@@ -346,9 +343,9 @@
           </div>
           <div class="album box">
             <div class="status-main">
-              <img src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg" class="status-img" />
+           <!-- <img src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg" class="status-img" /> -->
               <div class="album-detail">
-                <div class="album-title"><strong>rustycode</strong> create new <span>album</span></div>
+                <div class="album-title"> create new <span>album</span></div>
                 <div class="album-date">6 hours ago</div>
               </div>
               <button class="intro-menu"></button>

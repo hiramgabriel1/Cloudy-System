@@ -11,10 +11,10 @@
 
 <!--?¡ NEWS CAMILO  -->
 1.- hacer el aside bar con js en modo responsive nada mas
-2.- quitar sección de amigos en modo mobile y en desktop
-3.- quitar sección de "about"
-4.- modificar cards para que solo se vea foto y un pequeño texto sin mas
-5.- quitar la foto que sale en el cuadro para escribir y publicar
+2.- quitar sección de amigos en modo mobile y en desktop  ✔
+3.- quitar sección de "about" ✔
+4.- modificar cards para que solo se vea foto y un pequeño texto sin mas ✔
+5.- quitar la foto que sale en el cuadro para escribir y publicar  ✔
 
 ## HIRAM
 1.- Realizar preferencias de usuario:
