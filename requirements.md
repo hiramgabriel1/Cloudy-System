@@ -1,33 +1,19 @@
-## CAMILO 
-2.- Hacer test de funcionamiento en mobile (usando la herramienta de desarrolladores del navegador)
-
-3.- Realizar un responsive de la sección inicial (index.php)
-
-4.- Sección de posts.php, usar la misma plantilla de index.php, solo que crear un modal para poder añadir "publicaciones", con los siguientes requerimientos:
-    4.1 Titulo del post
-    4.2 Descripción del post
-    4.3 imagen
-    4.4 crear cards de ejemplo para mostrar publicaciones
-
 <!--?¡ NEWS CAMILO  -->
 1.- hacer el aside bar con js en modo responsive nada mas
-2.- quitar sección de amigos en modo mobile y en desktop  ✔
-3.- quitar sección de "about" ✔
-4.- modificar cards para que solo se vea foto y un pequeño texto sin mas ✔
-5.- quitar la foto que sale en el cuadro para escribir y publicar  ✔
+3.- quitar sección de "busqueda"
+4.- Añadir recuadro por post para escribir comentarios (usando un form)
 
 ## HIRAM
 1.- Realizar preferencias de usuario:
-    1.1 Notificaciones web
     1.2 Preferencias de tema (dark theme, sun theme) guardar en localstorage
+    1.3 renderizar data en cards
+    1.4 crear tabla comentarios
+    1.5 renderizar comentarios
 
 2.- Crear una nueva tabla en la bd para "posts"
     <!-- 2.1 Renderizar posts -->
     2.2 Opcion eliminar posts
-
-3.- Sección de comentarios en posts
-    3.1 renderizar comentarios y poder eliminar 
-
+    
 <!-- 4.- Permitir a los usuarios descargar imagenes -->
 5.- Rutas protegidas
      <!-- 5.1 crear files con respuesta correspondientes a http (manejo de errores) -->
