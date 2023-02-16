@@ -40,7 +40,6 @@ body {
   }
   .left-side.active > *:not(.logo) {
     opacity: 1;
-    transition: 0.3s 0.2s;
   }
   .left-side.active .left-side-button svg:first-child {
     opacity: 0;
@@ -60,7 +59,7 @@ body {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     transform-origin: bottom;
-    display: flex;
+    display: none;
     align-items: center;
     margin-top: -10px;
   }
@@ -99,6 +98,7 @@ body {
 
 .logo {
   font-family: "DM Sans", sans-serif;
+  /* overflow: hidden; */
   font-size: 15px;
   color: #fff;
   font-weight: 600;
@@ -108,7 +108,12 @@ body {
   letter-spacing: 4px;
   position: sticky;
   top: 0;
-  background: linear-gradient(to bottom, #151728 0%, #151728 76%, rgba(21, 23, 40, 0) 100%);
+  background: linear-gradient(
+    to bottom,
+    #151728 0%,
+    #151728 76%,
+    rgba(21, 23, 40, 0) 100%
+  );
 }
 
 .side-title {
@@ -282,7 +287,8 @@ body {
   transition: 0.3s;
   cursor: pointer;
 }
-.profile-menu-link.active, .profile-menu-link:hover {
+.profile-menu-link.active,
+.profile-menu-link:hover {
   color: #fff;
   background-color: #1b1d2e;
   border-bottom: 3px solid #1488fa;
@@ -494,7 +500,8 @@ body {
   font-weight: 500;
   border-radius: 20px;
 }
-.status-menu-item.active, .status-menu-item:hover {
+.status-menu-item.active,
+.status-menu-item:hover {
   background-color: #2e2e40;
   color: #fff;
 }
@@ -892,7 +899,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .profile-menu-link:nth-last-child(1),
-.profile-menu-link:nth-last-child(2) {
+  .profile-menu-link:nth-last-child(2) {
     display: none;
   }
 }
