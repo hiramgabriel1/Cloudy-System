@@ -544,7 +544,7 @@ body {
   max-width: calc(100% - 70px);
 }
 .status-textarea::placeholder {
-  color: #5c5d71;
+  color: #fff;
 }
 
 .status-actions {
@@ -573,7 +573,7 @@ body {
   }
 }
 
-.status-share {
+input[type="submit"] {
   background-color: #1b86f9;
   border: none;
   color: #fff;
