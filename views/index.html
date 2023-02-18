@@ -103,6 +103,7 @@
           </div>
         </div>
       </div>
+
       <div class="main">
         <div class="search-bar" style="height: 130px">
           <input type="text" placeholder="Search" />
@@ -111,21 +112,99 @@
           <div class="timeline">
             <!-- posts -->
             <div class="timeline-right">
-              <div class="status box">
+              <!-- post -->
+              <form
+                class="status box"
+                method="GET"
+                action="../backend/add.post.php"
+                enctype="multipart/form-data"
+              >
                 <div class="status-menu">
-                  <a class="status-menu-item" href="#">Fotos</a>
-                  <a class="status-menu-item" href="#">Archivos</a>
+                  <div class="button-wrapper">
+                    <span class="label"> Subir archivo </span>
+                    <input
+                      type="file"
+                      name="data-post-files"
+                      id="upload"
+                      class="upload-box"
+                      placeholder="Subir archivo"
+                    />
+                  </div>
                 </div>
-                <div class="status-main">
+                <!-- save data post -->
+                <div
+                  class="status-main"
+                  method="get"
+                  action="../backend/add.post.php"
+                  enctype=""
+                >
+                  <input
+                    type="text"
+                    placeholder="Titulo..."
+                    class="title-post"
+                    name="title-post"
+                  />
                   <textarea
                     class="status-textarea"
-                    placeholder="Escribe algo"
-                  ></textarea>
+                    placeholder="Escribe algo..."
+                    name="data-post-text"
+                  >
+                  </textarea>
                 </div>
+                <!-- close -->
                 <div class="status-actions">
-                  <button class="status-share">Compartir</button>
+                  <input
+                    class="status-share"
+                    type="submit"
+                    value="Compartir ahora"
+                  />
                 </div>
-              </div>
+              </form>
+              <!-- close form -->
+
+              <style>
+                .title-post {
+                  border: 2px #fff;
+                  outline: none;
+                  padding: 4px;
+                  background: transparent;
+                  color: #fff;
+                }
+                .title-post::placeholder {
+                  color: #fff;
+                }
+
+                .button-wrapper {
+                  position: relative;
+                  width: 150px;
+                  text-align: center;
+                }
+
+                .button-wrapper span.label {
+                  position: relative;
+                  z-index: 0;
+                  display: inline-block;
+                  width: 100%;
+                  background: #00bfff;
+                  cursor: pointer;
+                  color: #fff;
+                  padding: 10px 0;
+                  text-transform: uppercase;
+                  font-size: 12px;
+                }
+
+                #upload {
+                  display: inline-block;
+                  position: absolute;
+                  z-index: 1;
+                  width: 100%;
+                  height: 50px;
+                  top: 0;
+                  left: 0;
+                  opacity: 0;
+                  cursor: pointer;
+                }
+              </style>
 
               <!-- tipo de post 1 -->
               <div class="album box">
