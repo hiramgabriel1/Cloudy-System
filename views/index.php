@@ -117,25 +117,34 @@
                 class="status box"
                 method="POST"
                 action="../backend/add.post.php"
-                enctype="multipart/form-data">             
-                 <!-- <div class="status-menu">
+                enctype="multipart/form-data"
+              >
+                <div class="status-menu">
                   <div class="button-wrapper">
-                    <span class="label"> Subir archivo </span>
-                 
+                    <span class="label"> Subir imagen </span>
+
+                    <input
+                      type="file"
+                      name="imagen"
+                      id="upload"
+                      class="upload-box"
+                      placeholder="Upload File"
+                    />
                   </div>
-                </div> -->
+                </div>
                 <!-- save data post -->
                 <div class="status-main">
-                  <input type="file" name="imagen">
                   <input
                     type="text"
                     placeholder="Titulo..."
                     class="title-post"
-                    name="title-post"/>
+                    name="title-post"
+                  />
                   <textarea
                     class="status-textarea"
                     placeholder="Escribe algo..."
-                    name="data-post-text">
+                    name="data-post-text"
+                  >
                   </textarea>
                 </div>
                 <!-- close -->
@@ -144,7 +153,8 @@
                     class="status-share"
                     type="submit"
                     name="submit"
-                    value="Compartir ahora"/>
+                    value="Compartir ahora"
+                  />
                 </div>
               </form>
               <!-- close form -->
