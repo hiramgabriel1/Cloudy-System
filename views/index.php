@@ -10,7 +10,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-
     <title>CloudySystem</title>
   </head>
   <body>
@@ -44,7 +43,6 @@
             <a href="#"> Inicio </a>
             <a href="#">
               <span class="material-symbols-outlined"> home </span>
-
               Conversor PDF
             </a>
             <a href="#">
@@ -108,7 +106,8 @@
                 class="status box"
                 method="POST"
                 action="../backend/add.post.php"
-                enctype="multipart/form-data">
+                enctype="multipart/form-data"
+              >
                 <div class="status-menu">
                   <div class="button-wrapper">
                     <span class="label"> Subir imagen</span>
@@ -192,31 +191,123 @@
                 }
               </style>
 
-                <!-- render data -->
-                <?php   
+              <!-- tipo de post 1 -->
+                  <!-- render data -->
+                  <?php   
                   include("../backend/bd.php");    
                   $query = "SELECT * FROM posts";
                   $result = mysqli_query($conex, $query);
                   while ($fila = mysqli_fetch_array($result)) {
                ?>
-              <!-- tipo de post 1 -->
-              <div class="album box">
-                <div class="status-main">
-                  <div class="album-detail">
-                    <div class="album-title"><?php echo $fila['title_post'];?><span>Calculo</span></div>
-                    <div class="album-date">6 hours ago</div>
+              <div class="card">
+                <div class="card-header">
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="Profile Picture"
+                  />
+                  <div class="header-text">
+                    <h3>tester UI</h3>
+                    <p><?php echo $fila['fecha']; ?></p>
                   </div>
-                  <button class="intro-menu"></button>
                 </div>
-                <div class="album-content">
-                  <?php echo $fila["description_post"];?>
-                  <div class="album-photos"></div>
-                </div>                
-                <div class="album-actions">
-                  <!-- COMENTARIOS AQUÍ -->
+                <div class="card-body">
+                  <p>
+                    <?php echo $fila['description_post']; ?>
+                  </p>
+                  <!-- foto del post -->
+                    <img src="<?php echo $fila['ruta_file'];?>" alt="Post Image" />
+                </div>
+                <div class="card-footer">
+                  <button>Me Gusta</button>
+                  <button>Comentar</button>
+                  <button>Compartir</button>
                 </div>
               </div>
               <?php } ?>
+
+              <style>
+                .card {
+                  background-color: #151728;
+                  border-radius: 10px;
+                  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                  max-width: 600px;
+                  margin: 20px auto;
+                }
+
+                @media (max-width: 600px) {
+                  .card {
+                    width: 100%;
+                    border-radius: 0;
+                  }
+                }
+
+                .card-header {
+                  display: flex;
+                  align-items: center;
+                  padding: 20px;
+                }
+
+                .card-header img {
+                  border-radius: 50%;
+                  margin-right: 20px;
+                }
+
+                .card-header h3 {
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin: 0;
+                }
+
+                .card-header p {
+                  font-size: 14px;
+                  color: #aaa;
+                  margin: 0;
+                }
+
+                .card-body {
+                  padding: 20px;
+                }
+
+                .card-body p {
+                  margin-bottom: 20px;
+                }
+
+                .card-body img {
+                  max-width: 100%;
+                  border-radius: 10px;
+                }
+
+                .card-footer {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 20px;
+                }
+
+                .card-footer button {
+                  background-color: #fff;
+                  border: none;
+                  color: #444;
+                  font-size: 16px;
+                  cursor: pointer;
+                }
+
+                .card-footer button:hover {
+                  color: #4267b2;
+                }
+
+                @media (max-width: 600px) {
+                  .card-footer {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 10px 20px;
+                  }
+
+                  .card-footer button {
+                    margin-bottom: 10px;
+                  }
+                }
+              </style>
               <!-- tipo de post 2-->
               <div class="album box">
                 <div class="status-main">
@@ -375,7 +466,6 @@
           </div>
         </div>
       </div>
-
       <div
         class="overlay"
         @click="rightSide = false; leftSide = false"
