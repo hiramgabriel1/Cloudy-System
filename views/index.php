@@ -193,7 +193,7 @@
 
               <!-- tipo de post 1 -->
                   <!-- render data -->
-                  <?php   
+               <?php   
                   include("../backend/bd.php");    
                   $query = "SELECT * FROM posts";
                   $result = mysqli_query($conex, $query);
@@ -206,8 +206,14 @@
                     alt="Profile Picture"
                   />
                   <div class="header-text">
-                    <h3>tester UI</h3>
-                    <p><?php echo $fila['fecha']; ?></p>
+                  <?php  
+                  include("../backend/bd.php");
+                  $query_users = "SELECT * FROM users";
+                  $result_users = mysqli_query($conex, $query_users);
+                  while($fila_users = mysqli_fetch_array($result_users)){
+                ?>
+                    <h3><?php echo $fila_users['name_user']; } ?></h3>
+                    <p><?php echo $fila['fecha']?></p>
                   </div>
                 </div>
                 <div class="card-body">
