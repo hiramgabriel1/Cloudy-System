@@ -191,7 +191,6 @@
                 }
               </style>
 
-              <!-- tipo de post 1 -->
               <!-- render data -->
               <?php   
                   include("../backend/bd.php");    
@@ -206,7 +205,7 @@
                     alt="Profile Picture"
                   />
                   <div class="header-text">
-                    <h3>Usuario</h3>
+                    <h3><?php echo $fila['title_post']; ?></h3>
                     <p><?php echo $fila['fecha']?></p>
                   </div>
                 </div>
@@ -220,15 +219,102 @@
                     alt="Post Image"
                   />
                 </div>
-                <div class="card-footer">
-                  <button>Me Gusta</button>
-                  <button>Comentar</button>
-                  <button>Compartir</button>
-                </div>
+                <?php   
+                  include("../backend/bd.php");    
+                  $query_comment = "SELECT * FROM comments";
+                  $result_comment = mysqli_query($conex, $query_comment);
+                  while ($fila_comment = mysqli_fetch_array($result_comment)) {
+               ?>
+                <form
+                  class="card-footer"
+                  method="POST"
+                  action="../backend/addComment.php"
+                >
+                  <div class="form__group field">
+                    <input
+                      type="input"
+                      class="form__field"
+                      placeholder="Name"
+                      name="comentario"
+                      id="name"
+                      required
+                    />
+                    <p><?php echo $fila_comment['comment']; ?></p>
+                    <label for="name" class="form__label">Comentario</label>
+                  </div>
+                  <!-- <button>Me Gusta</button> -->
+                  <input
+                    type="submit"
+                    name="submit"
+                    class="button-comment"
+                    value="Comentar"
+                  />
+                  <input type="submit" value="Compartir" />
+                </form>
               </div>
+              <?php } ?>
               <?php } ?>
 
               <style>
+                .form__group {
+                  position: relative;
+                  padding: 15px 0 0;
+                  margin-top: 10px;
+                  width: 50%;
+                }
+
+                .form__field {
+                  font-family: inherit;
+                  width: 100%;
+                  border: 0;
+                  border-bottom: 2px solid #9b9b9b;
+                  outline: 0;
+                  font-size: 1.3rem;
+                  color: #fff;
+                  padding: 7px 0;
+                  background: transparent;
+                  transition: border-color 0.2s;
+                }
+                .form__field::placeholder {
+                  color: transparent;
+                }
+                .form__field:placeholder-shown ~ .form__label {
+                  font-size: 10px;
+                  cursor: text;
+                  top: 20px;
+                }
+
+                .form__label {
+                  position: absolute;
+                  top: 0;
+                  display: block;
+                  transition: 0.2s;
+                  color: #9b9b9b;
+                }
+
+                .form__field:focus {
+                  padding-bottom: 6px;
+                  font-weight: 700;
+                  border-width: 3px;
+                  border-image: linear-gradient(to right, #11998e, #38ef7d);
+                  border-image-slice: 1;
+                }
+                .form__field:focus ~ .form__label {
+                  position: absolute;
+                  top: 0;
+                  display: block;
+                  transition: 0.2s;
+                  font-size: 1rem;
+                  color: #11998e;
+                  font-weight: 700;
+                }
+
+                /* reset input */
+                .form__field:required,
+                .form__field:invalid {
+                  box-shadow: none;
+                }
+
                 .card {
                   background-color: #151728;
                   border-radius: 10px;
