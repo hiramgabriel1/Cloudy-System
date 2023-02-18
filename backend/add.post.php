@@ -6,6 +6,11 @@
         // title post
         $title_post = $_POST['title-post'];
 
+        // fecha de posteo
+        $fecha= date("Y-m-d H:i:s");
+        // hora de posteo
+        $hora = time();
+
         $nameImage = $_FILES["imagen"]["name"];
         $archivo = $_FILES["imagen"]["tmp_name"];
         $ruta="../images";
@@ -13,7 +18,7 @@
         $ruta=$ruta."/".$nameImage;
         move_uploaded_file($archivo, $ruta);
 
-        $QUERY = "INSERT INTO posts (title_post, description_post, ruta_file) VALUES ('$title_post','$data_post_text_simple', '$ruta')";
+        $QUERY = "INSERT INTO posts (title_post, fecha, hora_post, description_post, ruta_file) VALUES ('$title_post','$fecha','$data_post_text_simple', '$ruta')";
         $result_query = mysqli_query($conex, $QUERY);
         if($result_query){
             header("Location: ../views/index.php");
