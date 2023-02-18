@@ -29,16 +29,6 @@
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
-          <svg
-            stroke="currentColor"
-            stroke-width="2"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            viewBox="0 0 24 24"
-          >
-            <path d="M19 12H5M12 19l-7-7 7-7" />
-          </svg>
         </div>
         <div class="logo">CloudySystem</div>
         <style>
@@ -113,16 +103,15 @@
             <!-- posts -->
             <div class="timeline-right">
               <!-- post -->
+
               <form
                 class="status box"
                 method="POST"
                 action="../backend/add.post.php"
-                enctype="multipart/form-data"
-              >
+                enctype="multipart/form-data">
                 <div class="status-menu">
                   <div class="button-wrapper">
-                    <span class="label"> Subir imagen </span>
-
+                    <span class="label"> Subir imagen</span>
                     <input
                       type="file"
                       name="imagen"
@@ -203,70 +192,31 @@
                 }
               </style>
 
+                <!-- render data -->
+                <?php   
+                  include("../backend/bd.php");    
+                  $query = "SELECT * FROM posts";
+                  $result = mysqli_query($conex, $query);
+                  while ($fila = mysqli_fetch_array($result)) {
+               ?>
               <!-- tipo de post 1 -->
               <div class="album box">
                 <div class="status-main">
                   <div class="album-detail">
-                    <div class="album-title">Ayuda <span>Calculo</span></div>
+                    <div class="album-title"><?php echo $fila['title_post'];?><span>Calculo</span></div>
                     <div class="album-date">6 hours ago</div>
                   </div>
                   <button class="intro-menu"></button>
                 </div>
                 <div class="album-content">
-                  ¿¿Algun tútor de matematicas??
+                  <?php echo $fila["description_post"];?>
                   <div class="album-photos"></div>
-                </div>
+                </div>                
                 <div class="album-actions">
-                  <a href="#" class="album-action">
-                    <svg
-                      stroke="currentColor"
-                      stroke-width="2"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
-                      />
-                    </svg>
-                    87
-                  </a>
-                  <a href="#" class="album-action">
-                    <svg
-                      stroke="currentColor"
-                      stroke-width="2"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="css-i6dzq1"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
-                      />
-                    </svg>
-                    20
-                  </a>
-                  <a href="#" class="album-action">
-                    <svg
-                      stroke="currentColor"
-                      stroke-width="2"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="css-i6dzq1"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M17 1l4 4-4 4" />
-                      <path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4" />
-                      <path d="M21 13v2a4 4 0 01-4 4H3" />
-                    </svg>
-                    13
-                  </a>
+                  <!-- COMENTARIOS AQUÍ -->
                 </div>
               </div>
-
+              <?php } ?>
               <!-- tipo de post 2-->
               <div class="album box">
                 <div class="status-main">
