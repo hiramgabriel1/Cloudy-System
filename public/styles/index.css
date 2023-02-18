@@ -15,7 +15,7 @@ body {
   color: #ccc8db;
 }
 
-.container {
+.containers {
   background-color: #151728;
   display: flex;
   max-width: 1600px;
@@ -41,10 +41,10 @@ body {
   .left-side.active > *:not(.logo) {
     opacity: 1;
   }
-  .left-side.active .left-side-button svg:first-child {
+  .left-side.active .left-side-button .icon:first-child {
     opacity: 0;
   }
-  .left-side.active .left-side-button svg:last-child {
+  .left-side.active .left-side-button .icon:last-child {
     transform: translate(-50%, -50%);
     opacity: 1;
   }
@@ -134,7 +134,7 @@ body {
   font-size: 15px;
   white-space: nowrap;
 }
-.side-menu svg {
+.side-menu .icon {
   margin-right: 16px;
   width: 16px;
 }
@@ -165,7 +165,7 @@ body {
   border-top: 1px solid #272a3a;
   position: relative;
 }
-.follow-me svg {
+.follow-me .icon {
   width: 16px;
   height: 16px;
   margin-right: 8px;
@@ -219,7 +219,7 @@ body {
   background-color: transparent;
   border: none;
   padding: 0 54px;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3e%3cpath d='M508.9 478.7L360 330a201.6 201.6 0 0045.2-127.3C405.3 90.9 314.4 0 202.7 0S0 91 0 202.7s91 202.6 202.7 202.6c48.2 0 92.4-17 127.3-45.2L478.7 509c4.2 4.1 11 4.1 15 0l15.2-15.1c4.1-4.2 4.1-11 0-15zm-306.2-116c-88.3 0-160-71.8-160-160s71.7-160 160-160 160 71.7 160 160-71.8 160-160 160z' data-original='%23000000' class='active-path' data-old_color='%23000000' fill='%235C5D71'/%3e%3c/svg%3e");
+  background-image: url("data:image/.icon+xml;charset=UTF-8,%3c.icon xmlns='http://www.w3.org/2000/.icon' width='512' height='512'%3e%3cpath d='M508.9 478.7L360 330a201.6 201.6 0 0045.2-127.3C405.3 90.9 314.4 0 202.7 0S0 91 0 202.7s91 202.6 202.7 202.6c48.2 0 92.4-17 127.3-45.2L478.7 509c4.2 4.1 11 4.1 15 0l15.2-15.1c4.1-4.2 4.1-11 0-15zm-306.2-116c-88.3 0-160-71.8-160-160s71.7-160 160-160 160 71.7 160 160-71.8 160-160 160z' data-original='%23000000' class='active-path' data-old_color='%23000000' fill='%235C5D71'/%3e%3c/.icon%3e");
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: 25px 50%;
@@ -392,7 +392,7 @@ body {
   color: #1771d6;
   text-decoration: none;
 }
-.info-item svg {
+.info-item .icon {
   width: 16px;
   margin-right: 10px;
 }
@@ -559,7 +559,7 @@ body {
   display: flex;
   align-items: center;
 }
-.status-action svg {
+.status-action .icon {
   width: 16px;
   flex-shrink: 0;
   margin-right: 8px;
@@ -660,7 +660,7 @@ body {
 .album-action:hover {
   color: #fff;
 }
-.album-action svg {
+.album-action .icon {
   width: 16px;
   margin-right: 6px;
 }
@@ -674,7 +674,7 @@ body {
   position: relative;
 }
 
-.account-button svg {
+.account-button .icon {
   width: 20px;
 }
 
@@ -752,7 +752,7 @@ body {
   align-items: center;
 }
 
-.right-search svg {
+.right-search .icon {
   width: 16px;
   height: 16px;
 }
@@ -771,12 +771,12 @@ body {
   padding-right: 10px;
 }
 
-.search-bar-svgs {
+.search-bar-.icons {
   color: #656679;
   display: flex;
 }
 
-.search-bar-svgs svg {
+.search-bar-.icons .icon {
   margin-right: 16px;
 }
 
@@ -825,7 +825,7 @@ body {
   top: 13px;
   right: 12px;
 }
-.right-side-button svg {
+.right-side-button .icon {
   width: 22px;
 }
 @media screen and (max-width: 1210px) {
@@ -853,11 +853,11 @@ body {
     color: #fff;
     border-bottom: 1px solid #272a3a;
   }
-  .left-side-button svg {
+  .left-side-button .icon {
     transition: 0.2s;
     width: 24px;
   }
-  .left-side-button svg:last-child {
+  .left-side-button .icon:last-child {
     position: absolute;
     left: 50%;
     transform: translate(100%, -50%);
@@ -923,3 +923,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+/* el maloso estuvo aquí */
