@@ -16,8 +16,7 @@
         $QUERY = "INSERT INTO posts (title_post, description_post, ruta_file) VALUES ('$title_post','$data_post_text_simple', '$ruta')";
         $result_query = mysqli_query($conex, $QUERY);
         if($result_query){
-            echo "funciona";
-            // header("../views/index.php");
+            header("Location: ../views/index.php");
         }
 
         // error_reporting(E_ALL);
