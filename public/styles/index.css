@@ -15,7 +15,7 @@ body {
   color: #ccc8db;
 }
 
-.containers {
+.container {
   background-color: #151728;
   display: flex;
   max-width: 1600px;

@@ -18,7 +18,7 @@
         $ruta=$ruta."/".$nameImage;
         move_uploaded_file($archivo, $ruta);
 
-        $QUERY = "INSERT INTO posts (title_post, fecha, hora_post, description_post, ruta_file) VALUES ('$title_post','$fecha','$data_post_text_simple', '$ruta')";
+        $QUERY = "INSERT INTO posts (title_post, fecha, description_post, ruta_file) VALUES ('$title_post','$fecha','$data_post_text_simple', '$ruta')";
         $result_query = mysqli_query($conex, $QUERY);
         if($result_query){
             header("Location: ../views/index.php");

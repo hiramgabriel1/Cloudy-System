@@ -34,3 +34,9 @@ Cambiar el proyecto a react con php
 crear una api rest con php, nodejs ó flask y consumirla desde react
 
 usar un framework como tailwind para estilizar 
+
+<!-- ! news -->
+PLUS:
+creador de pdf
+chat global
+conversor de video
