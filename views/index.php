@@ -41,10 +41,10 @@
           <div class="side-title">Herramientas</div>
           <div class="side-menu">
             <a href="#"> Inicio </a>
-            <a href="../tools/creator_pdf.html">
+            <!-- <a href="../tools/creator_pdf.html">
               <span class="material-symbols-outlined"> home </span>
               Creador PDF
-            </a>
+            </a> -->
             <a href="#">
               <span class="material-symbols-outlined"> heart_plus </span>
               Eventos
@@ -62,19 +62,19 @@
         <div class="side-wrapper">
           <div class="side-title">ENTRETENIMIENTO</div>
           <div class="side-menu">
-            <a href="#">
+            <a href="../entertainment/music.html">
               <span class="material-symbols-outlined"> headphones </span>
               Música
             </a>
-            <a href="#">
+            <a href="../entertainment/videos.html">
               <span class="material-symbols-outlined"> movie </span>
               Videos
             </a>
-            <a href="#">
+            <a href="../tools/pomodoro.html">
               <span class="material-symbols-outlined"> timer </span>
               Pomodoro
             </a>
-            <a href="../tools/memes.php">
+            <a href="../entertainment/memes.php">
               <span class="material-symbols-outlined">
                 sentiment_very_satisfied
               </span>
