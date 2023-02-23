@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reproducir video</title>
     <link rel="stylesheet" href="../lib/pico-master/css/pico.min.css">
-    <title>CloudySystem| Videos</title>
 </head>
 <body>
-    <div class="container">
-    </div>
+	<input type="file" id="inputFile">
+	<div id="videoContainer"></div>
+
+	<script>
+		const inputFile = document.getElementById('inputFile');
+		const videoContainer = document.getElementById('videoContainer');
+
+		inputFile.addEventListener('change', function() {
+			const file = inputFile.files[0];
+			const url = URL.createObjectURL(file);
+			const video = document.createElement('video');
+			video.src = url;
+			video.controls = true;
+			videoContainer.appendChild(video);
+		});
+	</script>
 </body>
 </html>
