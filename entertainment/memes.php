@@ -42,10 +42,6 @@
           <div class="side-menu">
             <a href="../views/index.php"> Inicio 
             <span class="material-symbols-outlined"> home </span>
-            </a>
-            <a href="../tools/creator_pdf.html">
-              Creador PDF
-            </a>
             <a href="#">
               <span class="material-symbols-outlined"> heart_plus </span>
               Eventos
