@@ -41,13 +41,13 @@
           <div class="side-title">Herramientas</div>
           <div class="side-menu">
             <a href="#"> Inicio </a>
-            <!-- <a href="../tools/creator_pdf.html">
+            <a href="../tools/creator_pdf.html">
               <span class="material-symbols-outlined"> home </span>
               Creador PDF
-            </a> -->
-            <a href="#">
+            </a>
+            <a href="../tools/todo.html">
               <span class="material-symbols-outlined"> heart_plus </span>
-              Eventos
+              Pendientes
             </a>
             <a
               href="../tools/plus.html"
@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="side-wrapper">
-          <div class="side-title">ENTRETENIMIENTO</div>
+          <div class="side-title">Más</div>
           <div class="side-menu">
             <a href="../entertainment/music.html">
               <span class="material-symbols-outlined"> headphones </span>
