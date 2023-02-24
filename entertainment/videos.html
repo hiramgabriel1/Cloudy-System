@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Reproducir video</title>
-    <link rel="stylesheet" href="../lib/pico-master/css/pico.min.css">
-</head>
-<body>
-	<input type="file" id="inputFile">
-	<div id="videoContainer"></div>
-
-	<script>
-		const inputFile = document.getElementById('inputFile');
-		const videoContainer = document.getElementById('videoContainer');
-
-		inputFile.addEventListener('change', function() {
-			const file = inputFile.files[0];
-			const url = URL.createObjectURL(file);
-			const video = document.createElement('video');
-			video.src = url;
-			video.controls = true;
-			videoContainer.appendChild(video);
-		});
-	</script>
-</body>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <head>
+    <title>Reproducir video</title>
+    <link rel="stylesheet" href="../lib/pico-master/css/pico.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <br />
+      <h1 class="title">Selecciona un video de tu categoría y miralo ahora</h1>
+      <input type="file" id="inputFile" />
+      <a href="../views/index.php">Volver a inicio</a>
+      <div id="videoContainer"></div>
+    </div>
+    <script src="./functions/videos.js"></script>
+  </body>
 </html>
