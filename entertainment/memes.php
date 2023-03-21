@@ -40,13 +40,25 @@
         <div class="side-wrapper">
           <div class="side-title">Herramientas</div>
           <div class="side-menu">
-            <a href="../views/index.php"> Inicio 
-            <span class="material-symbols-outlined"> home </span>
-            <a href="#">
-              <span class="material-symbols-outlined"> heart_plus </span>
-              Eventos
+            <a href="#"> Inicio </a>
+            <a href="../error/404.html">
+            <!-- <a href="../tools/creator_pdfhtml"> -->
+              <span class="material-symbols-outlined"> home </span>
+              Creador PDF
             </a>
-            <a href="./tools/plus.html" class="plus-section" style="color: gold">
+            <a href="../tools/todo.html">
+              <span class="material-symbols-outlined"> heart_plus </span>
+              Pendientes
+            </a>
+            <a href="../error/404.html"
+              class="plus-section"
+              style="color: gold"
+            >
+            <!-- <a
+              href="../tools/plus.html"
+              class="plus-section"
+              style="color: gold"
+            > -->
               <span class="material-symbols-outlined"> star </span>
               Plus
             </a>
@@ -55,7 +67,8 @@
         <div class="side-wrapper">
           <div class="side-title">Más</div>
           <div class="side-menu">
-            <a href="../entertainment/music.html">
+            <a href="../error/404.html">
+            <!-- <a href="../entertainment/music.html"> -->
               <span class="material-symbols-outlined"> headphones </span>
               Música
             </a>
@@ -73,18 +86,26 @@
               </span>
               Memes
             </a>
-            <a href="../tools/all.html">
+            <a href="../tools/report.php">
               <span class="material-symbols-outlined"> description </span>
-              Ver todo
+              Reportar problemas
+            </a>
+            <a href="../other/info.html">
+              <span class="material-symbols-outlined"> description </span>
+              Saber más
+            </a>
+            <a href="https://meettyou.online/">
+              <span class="material-symbols-outlined"> description </span>
+              MeettYou
             </a>
           </div>
         </div>
       </div>
 
       <div class="main">
-        <div class="search-bar" style="height: 130px">
+        <!-- <div class="search-bar" style="height: 130px">
           <input type="text" placeholder="Search" />
-        </div>
+        </div> -->
         <div class="main-container">
           <div class="timeline">
             <!-- posts -->
@@ -114,11 +135,13 @@
                     placeholder="Titulo..."
                     class="title-post"
                     name="title-post"
+                    required
                   />
                   <textarea
                     class="status-textarea"
                     placeholder="Escribe algo..."
                     name="data-post-text"
+                    required
                   >
                   </textarea>
                 </div>
