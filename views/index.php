@@ -1,3 +1,20 @@
+<!-- validar sesión -->
+<?php
+    session_start();
+    error_reporting(0);
+
+    $varsession = $_SESSION['user'];
+    if($varsession  == null || $varsession= ''){
+        // error message
+        echo "No tienes permisos para acceder, primero inicia sesión";
+        // redireccionar
+        echo "<br><br> <a href='./login.php'>Iniciar sesión</a>";
+
+        // close sesion
+        die();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
