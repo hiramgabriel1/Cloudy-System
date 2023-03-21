@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class="side-wrapper">
-          <div class="side-title">ENTRETENIMIENTO</div>
+          <div class="side-title">Más</div>
           <div class="side-menu">
             <a href="../entertainment/music.html">
               <span class="material-symbols-outlined"> headphones </span>
@@ -92,7 +92,7 @@
               <form
                 class="status box"
                 method="POST"
-                action="../backend/add.post.php"
+                action="../backend/add.post.memes.php"
                 enctype="multipart/form-data"
               >
                 <div class="status-menu">
@@ -133,7 +133,6 @@
                 </div>
               </form>
               <!-- close form -->
-
               <style>
                 .title-post {
                   border: 2px #fff;
@@ -181,16 +180,13 @@
               <!-- render data -->
               <?php   
                   include("../backend/bd.php");    
-                  $query = "SELECT * FROM posts";
+                  $query = "SELECT * FROM memes";
                   $result = mysqli_query($conex, $query);
                   while ($fila = mysqli_fetch_array($result)) {
                ?>
-              <div class="card">
+           <div class="card">
                 <div class="card-header">
-                  <img
-                    src="https://via.placeholder.com/50"
-                    alt="Profile Picture"
-                  />
+                
                   <div class="header-text">
                     <h3><?php echo $fila['title_post']; ?></h3>
                     <p><?php echo $fila['fecha']?></p>
@@ -206,7 +202,7 @@
                     alt="Post Image"
                   />
                   <!-- <button class="options-post-comment">Ayudar</button> -->
-             </div>
+                </div>
               </div>
               <?php } ?>
 
