@@ -4,7 +4,7 @@
     <title>MeettYou | Soporte</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="../css/comments.css" />
+    <link rel="stylesheet" type="text/css" href="./css/comments.css" />
     <link rel="stylesheet" type="text/css" href="../css/utils.comments.css" />
 
     <meta name="robots" content="noindex, follow" />
@@ -81,7 +81,7 @@
         <form
           class="contact100-form validate-form"
           method="get"
-          action="../backend/section_comment.php"
+          action="../backend/reports.php"
         >
           <span class="contact100-form-title">Nos importa tu opinión!</span>
           <div
@@ -118,7 +118,7 @@
                 <option value="queja">Queja</option>
                 <option value="comentario">Comentario</option>
                 <option value="sugerencia">Sugerencia</option>
-                <option value="contactar">Contactar con MeettYou</option>
+                <option value="contactar">Contactar con CloudySystem</option>
               </select>
             </div>
             <span class="focus-input100"></span>
