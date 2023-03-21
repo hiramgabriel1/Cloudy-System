@@ -80,9 +80,9 @@
               </span>
               Memes
             </a>
-            <a href="../tools/all.html">
+            <a href="../tools/problems.html">
               <span class="material-symbols-outlined"> description </span>
-              Ver todo
+              Reportar problemas
             </a>
           </div>
         </div>
@@ -194,10 +194,7 @@
                ?>
               <div class="card">
                 <div class="card-header">
-                  <img
-                    src="https://via.placeholder.com/50"
-                    alt="Profile Picture"
-                  />
+                
                   <div class="header-text">
                     <h3><?php echo $fila['title_post']; ?></h3>
                     <p><?php echo $fila['fecha']?></p>
@@ -218,6 +215,10 @@
               <?php } ?>
 
               <style>
+                .image-responsive{
+                  width: 200px;
+                  object-fit:cover;
+                }
                 .options-post-comment {
                   cursor: pointer;
                   padding: 10px;
