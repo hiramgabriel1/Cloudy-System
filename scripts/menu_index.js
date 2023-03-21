@@ -1,9 +1,7 @@
+const burguerMenu = document.querySelector(".menu")
+const bar = document.querySelector(".left-side")
 
-const nav = document.querySelector("#nav");
-const abrir = document.querySelector("#abrir");
-
-abrir.addEventListener("click", () => {
-    alert("holas");
-
-    
+burguerMenu.addEventListener("click", ()=>{
+    burguerMenu.classList.toggle("active")
+    bar.classList.toggle("active")    
 })
