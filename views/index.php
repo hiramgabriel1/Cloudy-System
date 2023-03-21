@@ -16,21 +16,14 @@
     <div class="container" x-data="{ rightSide: false, leftSide: false }">
       <div class="left-side" :class="{'active' : leftSide}">
         <div class="left-side-button" @click="leftSide = !leftSide">
-          <svg
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
+         <!-- <button class="menu"></button> -->
+         <button class="menu">Menú</button>
         </div>
         <div class="logo">CloudySystem</div>
         <style>
+          .menu{
+            
+          }
           @media screen and(max-width:930px) {
             .logo {
               visibility: hidden;
@@ -41,7 +34,8 @@
           <div class="side-title">Herramientas</div>
           <div class="side-menu">
             <a href="#"> Inicio </a>
-            <a href="../tools/creator_pdf.html">
+            <a href="../error/404.html">
+            <!-- <a href="../tools/creator_pdfhtml"> -->
               <span class="material-symbols-outlined"> home </span>
               Creador PDF
             </a>
@@ -49,11 +43,15 @@
               <span class="material-symbols-outlined"> heart_plus </span>
               Pendientes
             </a>
-            <a
-              href="../tools/plus.html"
+            <a href="../error/404.html"
               class="plus-section"
               style="color: gold"
             >
+            <!-- <a
+              href="../tools/plus.html"
+              class="plus-section"
+              style="color: gold"
+            > -->
               <span class="material-symbols-outlined"> star </span>
               Plus
             </a>
@@ -62,7 +60,8 @@
         <div class="side-wrapper">
           <div class="side-title">Más</div>
           <div class="side-menu">
-            <a href="../entertainment/music.html">
+            <a href="../error/404.html">
+            <!-- <a href="../entertainment/music.html"> -->
               <span class="material-symbols-outlined"> headphones </span>
               Música
             </a>
@@ -80,20 +79,25 @@
               </span>
               Memes
             </a>
-            <a href="../tools/problems.html">
+            <a href="../tools/report.php">
               <span class="material-symbols-outlined"> description </span>
               Reportar problemas
+            </a>
+            <a href="../other/info.html">
+              <span class="material-symbols-outlined"> description </span>
+              Saber más
             </a>
           </div>
         </div>
       </div>
 
       <div class="main">
-        <div class="search-bar" style="height: 130px">
+        <!-- <div class="search-bar" style="height: 130px">
           <input type="text" placeholder="Search" />
-        </div>
+        </div> -->
         <div class="main-container">
           <div class="timeline">
+
             <!-- posts -->
             <div class="timeline-right">
               <form
@@ -121,12 +125,13 @@
                     placeholder="Titulo..."
                     class="title-post"
                     name="title-post"
+                    required
                   />
                   <textarea
                     class="status-textarea"
                     placeholder="Escribe algo..."
                     name="data-post-text"
-                  >
+                    required>
                   </textarea>
                 </div>
                 <!-- close -->
@@ -207,7 +212,6 @@
                   <!-- foto del post -->
                   <img
                     src="<?php echo $fila['ruta_file'];?>"
-                    alt="Post Image"
                   />
                   <!-- <button class="options-post-comment">Ayudar</button> -->
                 </div>
@@ -381,5 +385,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../scripts/functions_index.js"></script>
+    <script src="../scripts/menu_index.js"></script>
   </body>
 </html>
