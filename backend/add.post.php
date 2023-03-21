@@ -18,12 +18,21 @@
         $ruta=$ruta."/".$nameImage;
         move_uploaded_file($archivo, $ruta);
 
-        $QUERY = "INSERT INTO posts (title_post, fecha, description_post, ruta_file) VALUES ('$title_post','$fecha','$data_post_text_simple', '$ruta')";
-        $result_query = mysqli_query($conex, $QUERY);
-        if($result_query){
-            header("Location: ../views/index.php");
+        if(isset($data_post_text_simple) && isset($title_post)){
+            
         }
 
+        try {
+            $QUERY = "INSERT INTO posts (title_post, fecha, description_post, ruta_file) VALUES ('$title_post','$fecha','$data_post_text_simple', '$ruta')";
+            $result_query = mysqli_query($conex, $QUERY);
+            if($result_query){
+                header("Location: ../views/index.php");
+            }
+            //code...
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+      
         // error_reporting(E_ALL);
         // ini_set("display_errors", "1");
         ini_set('error_reporting', E_ERROR | E_PARSE);
