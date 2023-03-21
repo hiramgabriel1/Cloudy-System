@@ -13,7 +13,7 @@
 
         $nameImage = $_FILES["imagen"]["name"];
         $archivo = $_FILES["imagen"]["tmp_name"];
-        $ruta="../images";
+        $ruta="../public/images";
 
         $ruta=$ruta."/".$nameImage;
         move_uploaded_file($archivo, $ruta);
