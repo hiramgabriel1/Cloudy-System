@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+* {
+margin: 0;
+padding: 0;
+font-family: "Noto Sans", sans-serif;
+outline: none;
+}
+
+body {
+background: #e0e5ec;
+}
+
+.content_main {
+min-height: 100vh;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+flex-direction: column;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+}
+
+#content-cover {
+position: relative;
+border: none;
+width: 250px;
+height: 250px;
+border-radius: 50%;
+margin: 0 0 2em 0;
+background: transparent;
+-webkit-box-shadow: -7px -7px 20px 2px #fff9, -4px -4px 5px 2px #fff9,
+7px 7px 20px 2px #0002, 4px 4px 5px 2px #0001;
+box-shadow: -7px -7px 20px 2px #fff9, -4px -4px 5px 2px #fff9,
+7px 7px 20px 2px #0002, 4px 4px 5px 2px #0001;
+}
+
+/*Class for Effect of the image*/
+.cover {
+width: 95%;
+height: 95%;
+border-radius: 50%;
+position: relative;
+top: 7px;
+left: 7px;
+-webkit-animation: cover 2.8s linear infinite;
+animation: cover 2.8s linear infinite;
+-webkit-animation-play-state: paused;
+animation-play-state: paused;
+}
+
+.play {
+width: 95%;
+height: 95%;
+border-radius: 50%;
+position: relative;
+top: 7px;
+left: 7px;
+-webkit-animation: cover 2.8s linear infinite;
+animation: cover 2.8s linear infinite;
+}
+
+@-webkit-keyframes cover {
+100% {
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+}
+
+@keyframes cover {
+100% {
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+}
+
+/* Button play - neumorphism */
+.custom-btn {
+font-size: 1.2em;
+margin-top: 1em;
+width: 70px;
+height: 70px;
+cursor: pointer;
+position: relative;
+border-radius: 50%;
+border: none;
+background: transparent;
+-webkit-box-shadow: -7px -7px 20px 2px #fff9, -4px -4px 5px 2px #fff9,
+7px 7px 20px 2px #0002, 4px 4px 5px 2px #0001;
+box-shadow: -7px -7px 20px 2px #fff9, -4px -4px 5px 2px #fff9,
+7px 7px 20px 2px #0002, 4px 4px 5px 2px #0001;
+-webkit-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+.custom-btn:active {
+text-shadow: none;
+background: #d2d8df;
+-webkit-box-shadow: 4px 4px 6px 0 #fff9, -4px -4px 6px 0 #0002,
+inset -4px -4px 6px 0 #fff9, inset 4px 4px 6px 0 #0002;
+box-shadow: 4px 4px 6px 0 #fff9, -4px -4px 6px 0 #0002,
+inset -4px -4px 6px 0 #fff9, inset 4px 4px 6px 0 #0002;
+}
+
+/* Progress Bar */
+#progress-bar {
+position: relative;
+width: 350px;
+height: 10px;
+margin: 1em 0 2em 0;
+border-radius: 10px;
+-webkit-box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+overflow: hidden;
+}
+
+#progress {
+width: 0%;
+height: 100%;
+border-radius: 10px;
+background: -webkit-gradient(
+linear,
+left top,
+right top,
+from(#76e2d0d0),
+to(#cc75ffce)
+);
+background: -webkit-linear-gradient(left, #76e2d0d0, #cc75ffce);
+background: -o-linear-gradient(left, #76e2d0d0, #cc75ffce);
+background: linear-gradient(90deg, #76e2d0d0, #cc75ffce);
+}
+
+/* Audio */
+.audio-time {
+width: 380px;
+position: relative;
+margin-top: -1.5em;
+margin-bottom: 3em;
+}
+
+#current-time {
+position: absolute;
+left: 0;
+color: #636d79;
+}
+
+#duration {
+position: absolute;
+right: 0;
+color: #636d79;
+}
+
+/* Icons */
+.icons,
+#icon {
+font-size: 1.5em;
+color: #636d79;
+}
+
+/* Controls */
+.controls {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-box-pack: space-evenly;
+-ms-flex-pack: space-evenly;
+justify-content: space-evenly;
+-webkit-box-orient: horizontal;
+-webkit-box-direction: normal;
+-ms-flex-direction: row;
+flex-direction: row;
+width: 330px;
+}
+
+.btn-previous,
+.btn-next {
+width: 55px;
+height: 55px;
+}
+
+@media only screen and (max-width: 600px) {
+.btn-play:active {
+text-shadow: none;
+background: #d2d8df;
+-webkit-box-shadow: 4px 4px 6px 0 #fff9, -4px -4px 6px 0 #0002,
+  inset -4px -4px 6px 0 #fff9, inset 4px 4px 6px 0 #0002;
+box-shadow: 4px 4px 6px 0 #fff9, -4px -4px 6px 0 #0002,
+  inset -4px -4px 6px 0 #fff9, inset 4px 4px 6px 0 #0002;
+}
+#progress-bar {
+width: 250px;
+height: 8px;
+}
+.audio-time {
+width: 280px;
+font-size: 0.9em;
+}
+.controls {
+width: 290px;
+}
+}
+

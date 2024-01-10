@@ -6,12 +6,12 @@
         $tmp = $_FILES['imagen']['tmp_name'];
 
         $file = "../public/images";
-        $fileName = $_POST['name-image'];
+        // $fileName = $_POST['name-image'];
         $ruta = $file . '/' . $nameImage;
 
         move_uploaded_file($tmp, $ruta);
 
-        $query = "INSERT INTO imagenes (ruta, filename) VALUES ('$ruta', '$fileName')";
+        $query = "INSERT INTO assets(ruta) VALUES ('$ruta')";
         $result = mysqli_query($conex, $query);
         
         if($result){
@@ -21,5 +21,4 @@
             echo "error"; 
         }
     }
-
 ?>

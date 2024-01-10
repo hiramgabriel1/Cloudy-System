@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./info.css" />
+    <title>Creadores de CloudySystem</title>
+  </head>
+  <body>
+    <button class="button">volver</button>
+    <style>
+      button {
+        padding: 10px;
+        border: none;
+        display: absolute;
+        left: 20px;
+      }
+    </style>
+    <script>
+      const button = document.querySelector(".button");
+      button.addEventListener("click", () => {
+        location.assign("../views/index.php");
+      });
+    </script>
+    <div class="container">
+      <div class="content">
+        <div class="card">
+          <div class="firstinfo">
+            <img src="./images/profile.jpg" />
+            <div class="profileinfo">
+              <h1>Hiram Gabriel</h1>
+              <h3>CEO & Desarrollador</h3>
+              <p class="bio">
+                "Por alguna razón, a mis 11 años de edad, pensaba en crear algo
+                que fuera utilizado por una o mas personas. Entonces nació mi
+                deseo por programar"
+              </p>
+              <style>
+                p {
+                  margin: 0 auto;
+                  display: relative;
+                  left: 5px;
+                }
+                a {
+                  text-decoration: none;
+                  color: #29857b;
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+        <div class="badgescard">
+          <span class="devicons devicons-django"
+            ><a href="https://www.instagram.com/hiram.dev/">Instagram</a></span
+          >
+        </div>
+      </div>
+      <br /><br />
+      <div class="content">
+        <div class="card">
+          <div class="firstinfo">
+            <img src="./images/profile_camilo.jpg" />
+            <div class="profileinfo">
+              <h1>Camilo Tapias</h1>
+              <h3>CTO & Desarrollador</h3>
+              <p class="bio">
+                Siempre quise estar entre los mejores, hacer cosas diferentes y cada día lo estoy logrando
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="badgescard">
+          <span class="devicons devicons-django"><a href="https://www.instagram.com/camilo.json/">Instagram</a></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

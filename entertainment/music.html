@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="../lib/pico-master/css/pico.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/music.css" />
+    <title>CloudySystem| Reproductor</title>
+  </head>
+  <body>
+    <div class="button-song">
+        
+    </div>
+    <div class="content_main ctnt">
+      <div id="content-cover">
+        <img
+          class="cover"
+          src="
+         https://i.ibb.co/G3qL1XT/img.webp"
+          alt="PlayList"
+        />
+      </div>
+
+      <!-- sound here -->
+      <div class="content-audio">
+        <audio id="audio">
+          <source
+            src="https://dl.dropbox.com/s/oswkgcw749xc8xs/The-Noisy-Freaks.mp3?dl=1"
+          />
+          Your browser does not support the audio element
+        </audio>
+      </div>
+      <div id="progress-bar">
+        <div id="progress"></div>
+      </div>
+      <div class="audio-time">
+        <span id="current-time">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+      <div class="controls">
+        <button class="custom-btn btn-replay" id="replay">
+          <span class="icons fas fa-undo"></span>
+        </button>
+
+        <button class="custom-btn btn-play" id="play">
+          <span id="icon" class="icons fas fa-play"></span>
+        </button>
+
+        <button class="custom-btn btn-stop" id="stop">
+          <span class="icons fas fa-stop"></span>
+        </button>
+      </div>
+    </div>
+    <script src="./functions/music.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a6eec1d329.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

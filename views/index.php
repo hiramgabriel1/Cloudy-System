@@ -1,3 +1,20 @@
+<!-- validar sesión -->
+<?php
+    session_start();
+    error_reporting(0);
+
+    $varsession = $_SESSION['user'];
+    if($varsession  == null || $varsession= ''){
+        // error message
+        echo "No tienes permisos para acceder, primero inicia sesión";
+        // redireccionar
+        echo "<br><br> <a href='./login.php'>Iniciar sesión</a>";
+
+        // close sesion
+        die();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,23 +31,16 @@
   </head>
   <body>
     <div class="container" x-data="{ rightSide: false, leftSide: false }">
-      <div class="left-side visible"  :class="{'active' : leftSide}" id="nav">
-        <div class="left-side-button" @click="leftSide = !leftSide" id="abrir">
-          <svg
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
+      <div class="left-side" :class="{'active' : leftSide}">
+        <div class="left-side-button" @click="leftSide = !leftSide">
+         <!-- <button class="menu"></button> -->
+         <button class="menu">Menú</button>
         </div>
         <div class="logo">CloudySystem</div>
         <style>
+          .menu{
+            
+          }
           @media screen and(max-width:930px) {
             .logo {
               visibility: hidden;
@@ -41,7 +51,8 @@
           <div class="side-title">Herramientas</div>
           <div class="side-menu">
             <a href="#"> Inicio </a>
-            <a href="../tools/creator_pdf.html">
+            <a href="../error/404.html">
+            <!-- <a href="../tools/creator_pdfhtml"> -->
               <span class="material-symbols-outlined"> home </span>
               Creador PDF
             </a>
@@ -49,11 +60,15 @@
               <span class="material-symbols-outlined"> heart_plus </span>
               Pendientes
             </a>
-            <a
-              href="../tools/plus.html"
+            <a href="../error/404.html"
               class="plus-section"
               style="color: gold"
             >
+            <!-- <a
+              href="../tools/plus.html"
+              class="plus-section"
+              style="color: gold"
+            > -->
               <span class="material-symbols-outlined"> star </span>
               Plus
             </a>
@@ -62,7 +77,8 @@
         <div class="side-wrapper">
           <div class="side-title">Más</div>
           <div class="side-menu">
-            <a href="../entertainment/music.html">
+            <a href="../error/404.html">
+            <!-- <a href="../entertainment/music.html"> -->
               <span class="material-symbols-outlined"> headphones </span>
               Música
             </a>
@@ -80,20 +96,25 @@
               </span>
               Memes
             </a>
-            <a href="../tools/all.html">
+            <a href="../tools/report.php">
               <span class="material-symbols-outlined"> description </span>
-              Ver todo
+              Reportar problemas
+            </a>
+            <a href="../other/info.html">
+              <span class="material-symbols-outlined"> description </span>
+              Saber más
             </a>
           </div>
         </div>
       </div>
 
       <div class="main">
-        <div class="search-bar" style="height: 130px">
+        <!-- <div class="search-bar" style="height: 130px">
           <input type="text" placeholder="Search" />
-        </div>
+        </div> -->
         <div class="main-container">
           <div class="timeline">
+
             <!-- posts -->
             <div class="timeline-right">
               <form
@@ -121,16 +142,17 @@
                     placeholder="Titulo..."
                     class="title-post"
                     name="title-post"
+                    required
                   />
                   <textarea
                     class="status-textarea"
                     placeholder="Escribe algo..."
                     name="data-post-text"
-                  >
+                    required>
                   </textarea>
                 </div>
                 <!-- close -->
-                <div class="status-actions" id="abre">
+                <div class="status-actions">
                   <input
                     class="status-share"
                     type="submit"
@@ -194,10 +216,7 @@
                ?>
               <div class="card">
                 <div class="card-header">
-                  <img
-                    src="https://via.placeholder.com/50"
-                    alt="Profile Picture"
-                  />
+                
                   <div class="header-text">
                     <h3><?php echo $fila['title_post']; ?></h3>
                     <p><?php echo $fila['fecha']?></p>
@@ -210,7 +229,6 @@
                   <!-- foto del post -->
                   <img
                     src="<?php echo $fila['ruta_file'];?>"
-                    alt="Post Image"
                   />
                   <!-- <button class="options-post-comment">Ayudar</button> -->
                 </div>
@@ -218,6 +236,10 @@
               <?php } ?>
 
               <style>
+                .image-responsive{
+                  width: 200px;
+                  object-fit:cover;
+                }
                 .options-post-comment {
                   cursor: pointer;
                   padding: 10px;
@@ -377,8 +399,9 @@
         :class="{ 'active': rightSide || leftSide }"
       ></div>
     </div>
-     <script src="../scripts/menu_index.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../scripts/functions_index.js"></script>
+    <script src="../scripts/menu_index.js"></script>
   </body>
 </html>

@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #2a2b3d;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 10px;
+  min-height: 500px;
+  background: #252636;
+}
+
+.title{
+  color: #fff;
+}
+
+.img-left {
+  width: 45%;
+  background: url("../assets/background-login.jpg")
+    center;
+  background-size: cover;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+input[type="email"],
+input[type="password"] {
+  border-radius: 100px;
+  border: none;
+}
+
+input[type="button"] {
+  border-radius: 100px;
+}
